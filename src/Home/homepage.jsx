@@ -1499,10 +1499,6 @@ const Homepage = () => {
           
 
 
-
-
-
-
         </article>
       </main>
     </>
