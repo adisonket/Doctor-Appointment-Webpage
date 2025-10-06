@@ -1445,19 +1445,19 @@ const Homepage = () => {
                 <ul class="footer-list">
 
                   <li>
-                    <a href="#" class="label-2 footer-link hover-underline">Home</a>
+                    <a href="#home" class="label-2 footer-link hover-underline">Home</a>
                   </li>
 
                   <li>
-                    <a href="#" class="label-2 footer-link hover-underline">All Doctors</a>
+                    <a href="#all_doctor" class="label-2 footer-link hover-underline">All Doctors</a>
                   </li>
 
                   <li>
-                    <a href="#" class="label-2 footer-link hover-underline">About Us</a>
+                    <a href="#about-us" class="label-2 footer-link hover-underline">About Us</a>
                   </li>
 
                   <li>
-                    <a href="#" class="label-2 footer-link hover-underline">Contact</a>
+                    <a href="#connect" class="label-2 footer-link hover-underline">Contact</a>
                   </li>
 
                 </ul>
