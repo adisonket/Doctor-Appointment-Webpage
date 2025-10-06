@@ -8,10 +8,13 @@
 } */
 
 .container{
-    width: 1200px;
+    /* width: 1200px; */
+    margin-top: 50px;
+    width: 1532px;
     height: 600px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 15px 0 rgba(0, 0, 0, 0.19);
 }
@@ -24,7 +27,6 @@
     align-items: center;
     text-align: center;
     border-bottom: 1px solid #1B5E3A;
-    background-color: rgb(255, 255, 255);
 }
 
 .header select {
