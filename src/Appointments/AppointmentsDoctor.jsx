@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./ViewAppointment.module.css";
+import style from "./AppointmentsDoctor.module.css";
 
 const appointments = [
   {
@@ -70,7 +70,7 @@ const getNextFourDates = () => {
   return dates;
 };
 
-const ViewAppointment = () => {
+const AppointmentsDoctor = () => {
   const dateOptions = getNextFourDates();
   const [selectedDate, setSelectedDate] = useState(dateOptions[0]);
 
@@ -141,4 +141,4 @@ const ViewAppointment = () => {
   );
 };
 
-export default ViewAppointment;
+export default AppointmentsDoctor;
