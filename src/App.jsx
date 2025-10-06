@@ -1,34 +1,20 @@
-import { useState, useEffect } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Preloader from './Home/preloader';
 import Homepage from './Home/homepage';
-import 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
-
-// import './App.css';
-
+import AppointmentsDoctor from './Appointments/AppointmentsDoctor';
 
 function App() {
-  
-
   return (
     <>
-      {/* <BrowserRouter>
-        <Header/>
+      <Preloader />
+      <BrowserRouter>
         <Routes>
-          <Route path="/appointmentdoctor" element={<AppointmentsDoctor/>} />
+          <Route path="/appointmentdoctor" element={<AppointmentsDoctor />} />
+          <Route path="/" element={<Homepage />} />
         </Routes>
-      </BrowserRouter> */}
-
-      <Preloader/>
-      <Homepage/>
-
-
+      </BrowserRouter>
     </>
   );
 }
 
 export default App;
-
