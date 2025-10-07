@@ -1,4 +1,5 @@
 // import '../App.css';
+import "./homepage2.css";
 import "./homepage.css";
 import Logo from "../assets/images/Dochub.png";
 import HeroSlide1 from "../assets/images/hero-slider-1.jpg";
