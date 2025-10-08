@@ -101,8 +101,8 @@ const AppointmentsDoctor = () => {
       <div className={style.container}>
         <div className={style.header}>
           <h1 id={style.header}>Appointments</h1>
+          <h2 id={style.dateHeading}>Date : </h2>
           <div className={style.date}>
-            <h2>Date : </h2>
             <select
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
@@ -124,44 +124,26 @@ const AppointmentsDoctor = () => {
                   <tbody>
                     <tr>
                       <td>
-                        <p>
-                          <b>Appointment ID : </b>
-                          {appt.appointmentId}
-                        </p>
+                        <p> <b>Appointment ID : </b> {appt.appointmentId} </p>
                       </td>
-                      <td>
-                        <p>
-                          <b>Date : </b>
-                          {appt.appointmentDate}
-                        </p>
+                      <td> 
+                        <p>  <b>Date : </b> {appt.appointmentDate} </p>
                       </td>
-                      <td>
-                        <p>
-                          <b>Time : </b>
-                          {appt.appointmentTime}
-                        </p>
+                      <td>                        
+                        <p>  <b>Time : </b> {appt.appointmentTime} </p>                                                 
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                        <p>
-                          <b>Patient Name : </b>
-                          {appt.patientName}
-                        </p>
+                      <td>                        
+                        <p>  <b>Patient Name : </b> {appt.patientName} </p>                                                  
                       </td>
-                      <td>
-                        <p>
-                          <b>Gender : </b>
-                          {appt.gender}
-                        </p>
+                      <td>                        
+                        <p>  <b>Gender : </b> {appt.gender} </p>                                                  
                       </td>
                     </tr>
                     <tr>
-                      <td>
-                        <p>
-                          <b>Description : </b>
-                          {appt.description || "NA"}
-                        </p>
+                      <td>                        
+                        <p>  <b>Description : </b> {appt.description || "NA"} </p>                                                  
                       </td>
                     </tr>
                     <tr>
