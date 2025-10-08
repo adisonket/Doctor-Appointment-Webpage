@@ -9,8 +9,8 @@ function App() {
       <Preloader />
       <BrowserRouter>
         <Routes>
-          <Route path="/appointmentdoctor" element={<AppointmentsDoctor />} />
           <Route path="/" element={<Homepage />} />
+          <Route path="/appointmentdoctor" element={<AppointmentsDoctor />} />
         </Routes>
       </BrowserRouter>
     </>
