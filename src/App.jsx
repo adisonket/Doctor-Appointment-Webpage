@@ -7,7 +7,7 @@ import AppointmentsPatient from './Appointments/AppointmentsPatient';
 function App() {
   return (
     <>
-      {/* <Preloader /> */}
+      <Preloader />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
