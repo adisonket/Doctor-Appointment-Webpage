@@ -4,9 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-size: cover; */
-
-    /* background-color: aliceblue; */
 }
 
 .container{
@@ -45,11 +42,11 @@
 }
 
 #header{
-    margin-left: 300px;
+    margin-left: 350px;
 }
 
 #dateHeading{
-    margin-left: 180px;
+    margin-left: 150px;
 }
 
 .date{
@@ -63,7 +60,7 @@
 
 .appointmentInfo{
     width: 90%;
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,6 +90,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.meetLink{
+    display: flex;
+    gap: 10px;
 }
 
 #link{
@@ -131,8 +133,5 @@
     margin: 20px;
 }
 
-.meetLink{
-    display: flex;
-    gap: 10px;
-}
+
 
