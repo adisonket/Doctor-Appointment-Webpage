@@ -1,0 +1,122 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 70%;
+    height: 95%;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 15px 0 rgba(0, 0, 0, 0.19);
+    padding: 0;
+    top: 10px;
+}
+
+.header {
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+}
+
+.subheader{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+}
+
+.appointmentInfo {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    overflow-y: auto;
+}
+
+.appointmentInfo::-webkit-scrollbar {
+    width: 6px;
+}
+.appointmentInfo::-webkit-scrollbar-thumb {
+    background-color: #04AA6D;
+    border-radius: 10px;
+}
+.appointmentInfo::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.appointments {
+    width: 90%;
+    height: 200px;
+    border: 1px solid black;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.tab {
+    cursor: pointer;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.activeTab {
+    color: #04AA6D;
+    border-bottom: 3px solid #04AA6D;
+}
+
+table{
+    border-spacing: 50px 20px;
+}
+
+#link{
+    text-decoration: none;
+    color: #0133fc;
+    font-size: 16px;
+    font-weight: 550;
+}
+#noLink{
+    color: rgba(0, 0, 0, 0.518);
+}
+.viewPdf {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.viewPdf:hover {
+    background-color: #039861;
+}
+
+.noAppointments {
+    padding: 25px;
+    margin: 20px;
+}
+
+.copyright{
+    position: absolute;
+    top: 41rem;
+    font-weight: 500;
+}
+.copyright a{
+    text-decoration: none;
+    color: #01764b;
+    font-weight: 500;
+}
