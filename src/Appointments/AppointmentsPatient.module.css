@@ -26,7 +26,7 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #1B5E3A
 }
 
 .subheader{
@@ -80,6 +80,11 @@ table{
     border-spacing: 50px 20px;
 }
 
+.meetLink{
+    display: flex;
+    gap: 10px;
+}
+
 #link{
     text-decoration: none;
     color: #0133fc;
@@ -87,7 +92,7 @@ table{
     font-weight: 550;
 }
 #noLink{
-    color: rgba(0, 0, 0, 0.518);
+    color: rgba(255, 255, 255, 0.723);
 }
 .viewPdf {
     background-color: #04AA6D;
