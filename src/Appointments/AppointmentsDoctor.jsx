@@ -148,7 +148,7 @@ const AppointmentsDoctor = () => {
                     </tr>
                     <tr>
                       <td>
-                        <p>
+                        <p className={style.meetLink}>
                           <b>Meet Link : </b>
                           {appt.meetLink ? (
                             <a
