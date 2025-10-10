@@ -8,7 +8,6 @@ const appointments = [
     drRole: "Consultant - Interventional Cardiologist",
     appointmentDate: "10/10/2025",
     appointmenTime: "11:00",
-    paymentStatus: "Done",
     meetLink: "https://meet.google.com/vtr-tprp-dcc",
   },
   {
@@ -16,27 +15,24 @@ const appointments = [
     drName: "Dr. Rimita Ghosh",
     drRole: "Consultant - Orthopaedic (Hand & Wrist) Surgeon",
     appointmentDate: "10/10/2025",
-    appointmenTime: "13:00",
-    paymentStatus: "Done",
-    meetLink: "",
+    appointmenTime: "15:00",
+    meetLink: "https://meet.google.com/vtr-tprp-dcc",
   },
   {
     appointmentId: 3,
     drName: "Dr. Shyam Das",
     drRole: "Consultant - Orthopaedic (Hand & Wrist) Surgeon",
-    appointmentDate: "10/10/2025",
+    appointmentDate: "11/10/2025",
     appointmenTime: "13:00",
-    paymentStatus: "Done",
-    meetLink: "",
+    meetLink: "https://meet.google.com/vtr-tprp-dcc",
   },
   {
     appointmentId: 4,
     drName: "Dr. Priya Banerjee",
     drRole: "Consultant - Orthopaedic (Hand & Wrist) Surgeon",
     appointmentDate: "11/10/2025",
-    appointmenTime: "13:00",
-    paymentStatus: "Done",
-    meetLink: "",
+    appointmenTime: "14:00",
+    meetLink: "https://meet.google.com/vtr-tprp-dcc",
   },
   {
     appointmentId: 5,
@@ -44,8 +40,7 @@ const appointments = [
     drRole: "Consultant - Orthopaedic (Hand & Wrist) Surgeon",
     appointmentDate: "12/10/2025",
     appointmenTime: "13:00",
-    paymentStatus: "Done",
-    meetLink: "",
+    meetLink: "https://meet.google.com/vtr-tprp-dcc",
   },
 ];
 
@@ -86,32 +81,43 @@ const AppointmentsPatient = () => {
 
   return (
     <div className={style.main}>
-        <div className={style.container}>
-          <div className={style.header}>
-            <h1>My Appointments</h1>
-            <div className={style.subheader}>
-              <h2
-                className={`${style.tab} ${
-                  activeTab === "upcoming" ? style.activeTab : ""
-                }`}
-                onClick={() => setActiveTab("upcoming")}
-              >
-                Upcoming
-              </h2>
-              <h2
-                className={`${style.tab} ${
-                  activeTab === "history" ? style.activeTab : ""
-                }`}
-                onClick={() => setActiveTab("history")}
-              >
-                History
-              </h2>
-            </div>
+      <div className={style.container}>
+        <div className={style.header}>
+          <h2>My Appointments</h2>
+          <div className={style.subheader}>
+            <h2
+              className={`${style.tab} ${
+                activeTab === "upcoming" ? style.activeTab : ""
+              }`}
+              onClick={() => setActiveTab("upcoming")}
+            >
+              Upcoming
+            </h2>
+            <h2
+              className={`${style.tab} ${
+                activeTab === "history" ? style.activeTab : ""
+              }`}
+              onClick={() => setActiveTab("history")}
+            >
+              History
+            </h2>
           </div>
+        </div>
 
-          <div className={style.appointmentInfo}>
-            {currentAppointments.length > 0 ? (
-              currentAppointments.map((appt) => (
+        <div
+          className={`${style.appointmentInfo} ${
+            activeTab === "upcoming" ? style.fadeIn : style.fadeOut
+          }`}
+        >
+          {currentAppointments.length > 0 ? (
+            currentAppointments.map((appt) => {
+              const appointmentDateTime = DateTime(
+                appt.appointmentDate,
+                appt.appointmenTime
+              );
+              const isPast = appointmentDateTime < now;
+
+              return (
                 <div className={style.appointments} key={appt.appointmentId}>
                   <table>
                     <tbody>
@@ -125,24 +131,9 @@ const AppointmentsPatient = () => {
                           </p>
                         </td>
                         <td>
-                          <p>
-                            <b>Payment Status :</b> {appt.paymentStatus}
-                          </p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h5>{appt.drRole}</h5>
-                        </td>
-                        <td>
-                          <p>
-                            <b>Time :</b> {appt.appointmenTime}
-                          </p>
-                        </td>
-                        <td>
                           <p className={style.meetLink}>
                             <b>Meet Link : </b>
-                            {appt.meetLink ? (
+                            {!isPast && appt.meetLink ? (
                               <a
                                 href={appt.meetLink}
                                 id={style.link}
@@ -158,21 +149,49 @@ const AppointmentsPatient = () => {
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <h5>{appt.drRole}</h5>
+                        </td>
+                        <td>
+                          <p>
+                            <b>Time :</b> {appt.appointmenTime}
+                          </p>
+                        </td>
                         <td colSpan="3">
-                          <button className={style.viewPdf}>View PDF</button>
+                          <button type="submit" class="btn btn-secondary">
+                            <span class="text text-1">View PDF</span>
+
+                            <span class="text text-2" aria-hidden="true">
+                              View PDF
+                            </span>
+                          </button>
                         </td>
                       </tr>
+                      <tr></tr>
                     </tbody>
                   </table>
                 </div>
-              ))
-            ) : (
-              <div className={style.noAppointments}>
-                <h4>No Appointments</h4>
-              </div>
-            )}
-          </div>
+              );
+            })
+          ) : (
+            <div className={style.noAppointments}>
+              <h4>No Appointments</h4>
+            </div>
+          )}
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2025 DOCHUB. All Rights Reserved | Crafted by{" "}
+          <a
+            href="https://www.linkedin.com/in/sanket-adhikary-020888253/"
+            target="_blank"
+            class="link"
+          >
+            Sanket Adhikary
+          </a>
+        </p>
+      </div>
     </div>
   );
 };
