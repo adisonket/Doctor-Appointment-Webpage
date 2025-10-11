@@ -17,7 +17,6 @@
   box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
   padding: 0;
   margin-bottom: 30px;
-  border-radius: 10px;
   background-color: rgba(18, 17, 17, 0.551);
 }
 
@@ -65,7 +64,8 @@
 .appointments {
   width: 90%;
   height: 170px;
-  border: 1px solid black;
+  border: 1px solid #1B5E3A;
+  border-radius: 10px;
   margin: 20px 0;
   padding: 10px;
 }
