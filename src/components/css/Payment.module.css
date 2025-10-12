@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    color-scheme: light dark;
+}
+
+body {
+    /* height: 91.01vh;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.024), rgb(0 0 0)), url(/src/assets/images/mountain.jpg); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+}
+
+#navbar {
+    margin-bottom: 4rem;
+}
+
+input:focus {
+    outline: 2px solid #6bbf8a;
+}
+
+.payment {
+    width: 84rem;
+    height: 32rem;
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    background-image: linear-gradient(232deg, rgb(0 0 0 / 65%), rgba(0, 0, 0, 0.668));
+    /* background-color: whitesmoke; */
+    border-radius: 22px;
+    padding-top: 4rem;
+    margin-top: 4rem;
+}
+
+.payment_left_upper {
+    width: 370px;
+}
+
+.payment_left {
+    width: 420px;
+    /* margin-left: 42px; */
+    /* margin-right: 39px; */
+}
+
+.payment_middle {
+    height: 30rem;
+    border: 0.1px solid rgb(60, 59, 59);
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.payment_right {
+    width: 400px;
+    /* border: 1px solid black; */
+    margin-right: 42px;
+    font-weight: 600;
+}
+
+.payment_left_between {
+    width: 420px;
+    border: 0.01px solid rgb(60, 59, 59);
+    margin: auto;
+    margin-top: 42px;
+    margin-bottom: 28px;
+}
+
+
+.payment_slider_container {
+    width: 100%;
+    overflow: hidden;
+    max-width: 500px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.payment_slider_wrapper {
+    display: flex;
+    width: 200%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.payment_slide {
+    width: 50%;
+    padding-top: 20px;
+    padding-left: 4px;
+    box-sizing: border-box;
+    /* background-color: #f0f0f0; */
+}
+
+
+
+.credit_card {
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-left: 21px;
+    overflow: auto;
+}
+
+.credit_card::-webkit-scrollbar {
+    display: none;
+}
+
+.credit_card {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.credit_card_front {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 139px;
+    padding: 21px;
+    background-image: linear-gradient(232deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.446)), url(/src/assets/images/mastercard.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Shining overlay */
+.credit_card_front::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(255, 255, 255, 0.1) 100%);
+    transform: skewX(-25deg);
+    animation: shineEffect 2.5s infinite;
+}
+
+/* Animation keyframes */
+@keyframes shineEffect {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+
+.credit_card_front_img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.credit_card_front_num {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 21px;
+}
+
+.credit_card_front_name {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    margin-top: 21px;
+    align-items: center;
+}
+
+.credit_card_front_name_sec {
+    display: flex;
+    gap: 8px;
+    /* flex-direction: column; */
+}
+
+
+.credit_card_front_num_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.credit_card_front_logo {
+    width: 50px;
+    /* float: right; */
+}
+
+.credit_card_front_add {
+    width: 300px;
+    height: 139px;
+    padding: 21px;
+    /* height: 120px; */
+    background-color: rgba(255, 255, 255, 0.194);
+    border-radius: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.credit_card_front_add_button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.4s ease-out;
+    cursor: pointer;
+}
+
+.credit_card_front_add_button:hover {
+    color: #6bbf8a;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.payment_details_att {
+    margin-top: 9px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.payment_right_pad {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.payment_method>span {
+    font-weight: 600;
+}
+
+.payment_font_green {
+    color: #6bbf8a;
+}
+
+.doctor_details {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor_details_name_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.payment_button_styles {
+    background-color: #2e7d5c;
+    width: 120px;
+    height: 37px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #2e7d5c;
+    border-radius: 8px;
+    transition: all 0.4s ease-out;
+    cursor: pointer;
+    margin-left: 9px;
+}
+
+.payment_button_styles:hover {
+    background: none;
+    color: #6bbf8a;
+}
+
+.active_payment_checkout {
+    border: 2px solid #2e7d5c;
+    background: none;
+    color: #6bbf8a;
+}
+
+.payment_method {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+#payment_options_button_card {
+    margin-right: 10px;
+}
+
+.payment_options_upi {
+    position: absolute;
+    margin-top: 24px;
+    display: none;
+}
+
+.payment_options_card {
+    position: absolute;
+    margin-top: 24px;
+    display: none;
+}
+
+.payment_options_upi_form {
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+}
+
+.payment_options_upi_inp {
+    width: 269px;
+    height: 43px;
+    background-color: rgba(255, 255, 255, 0.193);
+    border: none;
+    padding-left: 12px;
+    border-radius: 13px;
+}
+
+.payment_options_card_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment_options_card_inp {
+    width: 299px;
+    height: 43px;
+    background-color: rgba(255, 255, 255, 0.193);
+    border: none;
+    padding-left: 12px;
+    border-radius: 13px;
+}
+
+.payment_options_card_name {
+    width: 299px;
+    height: 43px;
+    background-color: rgba(255, 255, 255, 0.193);
+    border: none;
+    padding-left: 12px;
+    border-radius: 13px;
+}
+
+.payment_options_card_date {
+    width: 149px;
+    height: 43px;
+    background-color: rgba(255, 255, 255, 0.193);
+    border: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 13px;
+    /* margin-top: 20px; */
+}
+
+.payment_options_card_cvv {
+    width: 99px;
+    height: 43px;
+    background-color: rgba(255, 255, 255, 0.193);
+    border: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 13px;
+    margin-left: 10px;
+    /* margin-top: 20px; */
+}
+
+.payment_checkout {
+    margin-top: 20px;
+}
