@@ -8,66 +8,32 @@
   background-image: url("../assets/images/footer-bg 3.jpg");
 }
 
+.title{
+  width: 25%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 10px;
+  background-color: rgba(18, 17, 17, 0.551);
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
 .container {
   width: 1200px;
   height: 85%;
+  max-height: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
   box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   background-color: rgba(18, 17, 17, 0.551);
-}
-
-.header {
-  width: 90%;
-  padding: 20px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid #1b5e3a;
-}
-
-.subheader {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.appointmentInfo {
-  width: 90%;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  overflow-y: auto;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.appointmentInfo::-webkit-scrollbar {
-  width: 6px;
-}
-.appointmentInfo::-webkit-scrollbar-thumb {
-  background-color: #04aa6d;
-  border-radius: 10px;
-}
-.appointmentInfo::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.appointments {
-  width: 90%;
-  height: 170px;
-  border: 1px solid #1B5E3A;
-  border-radius: 10px;
-  margin: 20px 0;
-  padding: 10px;
 }
 
 .tab {
@@ -85,7 +51,7 @@
   left: 50%;
   transform: translateX(-50%) scaleX(0);
   width: 100%;
-  height: 3px;
+  height: 5px;
   background-color: #04aa6d;
   border-radius: 2px;
   transition: transform 0.4s ease-in-out;
@@ -100,8 +66,62 @@
   transform: translateX(-50%) scaleX(1);
 }
 
+.header {
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #1b5e3a;
+}
+
+.subheader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.appointments {
+  width: 90%;
+  height: 170px;
+  border: 1px solid #1B5E3A;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.appointmentInfo {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  overflow-y: auto;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.appointmentInfo::-webkit-scrollbar {
+  width: 6px;
+}
+.appointmentInfo::-webkit-scrollbar-thumb {
+  background-color: #04aa6d;
+  border-radius: 10px;
+}
+.appointmentInfo::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 table {
-  border-spacing: 50px 20px;
+  border-spacing: 70px 20px;
+}
+
+#drRole{
+  width: 300px;
 }
 
 .meetLink {
