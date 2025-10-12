@@ -8,12 +8,13 @@
     color-scheme: light dark;
 } */
 
-body {
-    /* height: 91.01vh;
-    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.024), rgb(0 0 0)), url(/src/assets/images/mountain.jpg); */
-    /* background-size: cover; */
+.body_part {
+    height: 100vh;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.024), rgb(0 0 0)), url(/src/assets/images/mountain.jpg);
+    background-size: cover;
     /* background-position: center; */
     /* background-repeat: no-repeat; */
+    padding-top: 7rem;
 }
 
 #navbar {
@@ -25,8 +26,8 @@ input:focus {
 }
 
 .payment {
-    width: 84rem;
-    height: 32rem;
+    width: 138rem;
+    height: 58rem;
     border: 1px solid black;
     margin: auto;
     display: flex;
@@ -36,7 +37,7 @@ input:focus {
     /* background-color: whitesmoke; */
     border-radius: 22px;
     padding-top: 4rem;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
 }
 
 .payment_left_upper {
@@ -50,7 +51,7 @@ input:focus {
 }
 
 .payment_middle {
-    height: 30rem;
+    height: 47rem;
     border: 0.1px solid rgb(60, 59, 59);
     margin-left: 30px;
     margin-right: 30px;
@@ -97,7 +98,7 @@ input:focus {
 
 
 .credit_card {
-    height: 30rem;
+    height: 42rem;
     display: flex;
     flex-direction: column;
     gap: 21px;
@@ -117,8 +118,8 @@ input:focus {
 .credit_card_front {
     position: relative;
     overflow: hidden;
-    width: 300px;
-    height: 139px;
+    width: 333px;
+    height: 180px;
     padding: 21px;
     background-image: linear-gradient(232deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.446)), url(/src/assets/images/mastercard.png);
     background-size: cover;
@@ -194,8 +195,8 @@ input:focus {
 }
 
 .credit_card_front_add {
-    width: 300px;
-    height: 139px;
+    width: 333px;
+    height: 180px;
     padding: 21px;
     /* height: 120px; */
     background-color: rgba(255, 255, 255, 0.194);
@@ -273,6 +274,7 @@ input[type=number] {
     font-size: 16px;
     font-weight: 600;
     border: 2px solid #2e7d5c;
+    color: white;
     border-radius: 8px;
     transition: all 0.4s ease-out;
     cursor: pointer;
@@ -298,6 +300,15 @@ input[type=number] {
 
 #payment_options_button_card {
     margin-right: 10px;
+}
+
+.payment_options_button{
+    display: flex;
+}
+
+.mmcvv{
+    display: flex;
+    gap: 30px;
 }
 
 .payment_options_upi {
