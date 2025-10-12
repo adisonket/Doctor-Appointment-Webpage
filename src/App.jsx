@@ -13,7 +13,7 @@ import ReviewSuccess from './components/Login/Review.jsx'
 function App() {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
