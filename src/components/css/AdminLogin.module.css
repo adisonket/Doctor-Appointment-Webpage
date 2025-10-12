@@ -9,19 +9,20 @@
 
 } */
 
-body{
-    /* height: 89.5vh; */
-    /* background-image: linear-gradient(-85deg, rgba(0, 0, 0, 10%), rgb(10 10 10)) , url(/src/assets/images/nature.jpg);   */
+.body{
+    height: 100vh;
+    background-image: linear-gradient(-85deg, rgba(0, 0, 0, 10%), rgb(10 10 10)) , url(/src/assets/images/nature.jpg);  
+    padding-top: 7rem;
 }
 
 .reg_login{
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     background: none;
 }
 
 .main_part{
-    width: 57rem;
-    height: 34rem;
+    width: 90rem;
+    height: 52rem;
     /* border: 2px solid black; */
     background-color: black;
     border-radius: 22px;
@@ -47,6 +48,8 @@ body{
 
 .leftpart_h1{
     margin-bottom: 2.7rem;
+    display: flex;
+    gap: 3px;
 }
 
 .leftpart_h1_span{
