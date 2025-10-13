@@ -1,5 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* 
 * {
     margin: 0;
     padding: 0;
@@ -9,17 +9,20 @@
 
 } */
 
-body {
-    /* height: 93.3vh;
+.body_part {
+    height: 100vh;
     background-image: linear-gradient(-90deg, rgb(0 0 0 / 30%), rgb(0 0 0)), url(/src/assets/images/DoctorBackMain.jpg);
+    font-family: "Open Sans", sans-serif;
+    color: white;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 }
 
 .pay_conf_review {
-    width: 67rem;
-    height: 41rem;
+    width: 107rem;
+    height: 67rem;
+
     /* border: 1px solid black; */
     margin: auto;
     /* background-color: rgba(42, 42, 42, 0.845); */
@@ -28,8 +31,8 @@ body {
 }
 
 .main_part {
-    /* margin-top: 5rem; */
-    margin-top: 3rem;
+    padding-top: 3rem;
+    /* margin-top: 3rem; */
 }
 
 .payment_conf {
@@ -69,6 +72,10 @@ body {
     cursor: pointer;
 }
 
+.payment_conf_copy_button_span{
+    color: rgba(255, 255, 255, 0.668);
+}
+
 .payment_conf_sec {
     display: flex;
     gap: 40px;
@@ -104,6 +111,7 @@ body {
     border-radius: 12px;
     background: none;
     border: 2px solid #4b9b6e;
+    color: white;
 }
 
 textarea {
@@ -137,6 +145,7 @@ textarea:focus {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.668);
 }
 
 .review_submit_button:hover {
