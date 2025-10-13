@@ -1,0 +1,276 @@
+.body_part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* padding-top: 2rem; */
+    background-image: linear-gradient(90deg, rgb(0 0 0 / 30%), rgb(0 0 0)), url('/src/assets/images/doctorback2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* backdrop-filter: blur(5px); */
+}
+
+.doctoredit_container{
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    gap: 10px;
+    height: 57rem;
+    width: 93rem;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    /* padding-top: 7rem; */
+    border-radius: 15px;
+    background-color: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('/src/assets/images/doctoredit.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(5px); */
+}
+
+.doctoredit_form_container{
+    width: 27rem;
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 15px;
+    padding: 25px;
+    padding-top: 0;
+}
+
+.doctoredit_form_container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.doctoredit_form_container::-webkit-scrollbar-thumb {
+  background-color: #4B9B6E;
+  border-radius: 4px;
+}
+
+.doctoredit_form_container::-webkit-scrollbar-thumb:hover {
+  background-color: #4B9B6E;
+}
+
+.doctoredit_form_container {
+  scrollbar-width: thin;
+  scrollbar-color: #4B9B6E #4B9B6E;
+}
+
+/* .doctoredit_form input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select{
+    background-color: #424242be;
+    color: #ffffff75;
+    border: 1px solid #1B5E3A;
+    padding: 8px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+} */
+
+.doctoredit_form input:focus, select:focus {
+    background-color: #262626;
+    color: #fff;
+    border: 2px solid #1B5E3A;;
+    box-shadow: 0 0 10px #1B5E3A, 0 0 20px #1B5E3A;
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+.doctoredit_form input::placeholder{
+    color: #888;
+}
+
+.doctoredit_form label {
+    display: block;
+    margin-top: none;
+    font-weight: bold;
+}
+
+.doctoredit_name{
+    display: flex;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.doctoredit_name_input{
+    width: 180px;
+    height: 35px;
+    padding: 7px;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #1B5E3A;
+}
+
+.doctoredit_contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.doctoredit_contact_input{
+    width: 395px;
+    height: 35px;
+    padding: 7px;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #1B5E3A;
+}
+
+.doctoredit_selection{
+    display: flex;
+    margin-top: 5px;
+    gap: 35px;
+}
+
+.doctoredit_select{
+    width: 180px;
+    height: 35px;
+    padding: 3px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #1B5E3A;
+}
+
+.doctoredit_registration_no{
+    display: flex;
+    gap: 35px;
+    margin-top: 20px;
+    width: 380px;
+}
+
+.doctoredit_imr{
+    width: 395px;
+    height: 35px;
+    padding: 7px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #1B5E3A;
+}
+
+.doctoredit_file_input {
+    display: none;
+}
+
+.doctoredit_file_label {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 6px;  
+    cursor: pointer;  
+    font-weight: 500;  
+    border: 1px solid #1B5E3A;  
+    transition: all 0.3s ease;
+}
+
+.doctoredit_file_label:hover {
+    background-color: #1B5E3A;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.doctoredit_file_name {
+    margin-left: 10px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.doctoredit_button{
+    margin-top: 25px;
+    padding: 3px 13px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #1B5E3A, #43A047);
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.doctoredit_button:hover {
+    background-color: #146543;
+}
+
+.doctoredit_button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 100%;
+  }
+}
+
+/* .form input[type="file"] {
+    margin-top: 0px;
+} */
+
+
+.doctoredit_preview_container {
+    margin-top: 13px;
+    width: 479px;
+    padding: 25px;
+}
+
+.doctoredit_preview_card {
+    display: flex;
+    flex-direction: column;
+    background-color: #2f2f2f;
+    padding: 10px;
+    margin-top: 39px;
+    margin-left: 80px;
+    gap: 5px;
+    border-radius: 6px;
+    /* align-items: center; */
+}
+
+.doctoredit_preview_item {
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* .centered {
+    text-align: center;
+} */
+
+.doctoredit_preview_image {
+    width: 150px;
+    height: 150px;
+    border-radius: 99.9px;
+    border: 3px solid #1B5E3A;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+    
+    animation: bounceIn 1s ease;
+    animation: rotateIn 0.8s ease;
+}
+
+.doctoredit_preview_card strong {
+    font-size: 17px;
+}
