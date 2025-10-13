@@ -119,7 +119,7 @@ input:focus {
     position: relative;
     overflow: hidden;
     width: 333px;
-    height: 180px;
+    height: 200px;
     padding: 21px;
     background-image: linear-gradient(232deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.446)), url(/src/assets/images/mastercard.png);
     background-size: cover;
@@ -196,7 +196,7 @@ input:focus {
 
 .credit_card_front_add {
     width: 333px;
-    height: 180px;
+    height: 200px;
     padding: 21px;
     /* height: 120px; */
     background-color: rgba(255, 255, 255, 0.194);
@@ -333,6 +333,7 @@ input[type=number] {
     width: 269px;
     height: 43px;
     background-color: rgba(255, 255, 255, 0.193);
+    color: white;
     border: none;
     padding-left: 12px;
     border-radius: 13px;
@@ -348,6 +349,7 @@ input[type=number] {
     width: 299px;
     height: 43px;
     background-color: rgba(255, 255, 255, 0.193);
+    color: white;
     border: none;
     padding-left: 12px;
     border-radius: 13px;
@@ -357,6 +359,7 @@ input[type=number] {
     width: 299px;
     height: 43px;
     background-color: rgba(255, 255, 255, 0.193);
+    color: white;
     border: none;
     padding-left: 12px;
     border-radius: 13px;
@@ -366,6 +369,7 @@ input[type=number] {
     width: 149px;
     height: 43px;
     background-color: rgba(255, 255, 255, 0.193);
+    color: white;
     border: none;
     padding-left: 12px;
     padding-right: 12px;
@@ -377,6 +381,7 @@ input[type=number] {
     width: 99px;
     height: 43px;
     background-color: rgba(255, 255, 255, 0.193);
+    color: white;
     border: none;
     padding-left: 12px;
     padding-right: 12px;

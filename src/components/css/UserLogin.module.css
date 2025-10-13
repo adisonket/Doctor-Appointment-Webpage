@@ -151,6 +151,7 @@
     width: 189px;
     height: 43px;
     background-color: rgba(255, 255, 255, 0.193);
+    color: white;
     border: none;
     padding-left: 12px;
     border-radius: 13px;
@@ -169,6 +170,7 @@
     width: 409px;
     height: 43px;
     background-color: rgba(255, 255, 255, 0.193);
+    color: white;
     border: none;
     padding-left: 12px;
     border-radius: 13px;
@@ -184,6 +186,7 @@
     width: 162px;
     height: 43px;
     background-color: #4b9b6e;
+    color: white;
     border: none;
     font-weight: 600;
     border-radius: 13px;

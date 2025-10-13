@@ -23,7 +23,7 @@ function App() {
           <Route path="/doclogin" element={<DoctorLogin />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/payment" element={<Payment />} />
-          {/* <Route path="/review" element={<Review />} /> */}
+          <Route path="/review" element={<ReviewSuccess />} />
         </Routes>
       </BrowserRouter> 
 
