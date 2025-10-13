@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import style from "./AppointmentsDoctor.module.css";
 
 const appointments = [
@@ -100,7 +100,7 @@ const isUpcomingAppointment = (appointmentDate, appointmentTime) => {
   if (appointmentDateTime.toDateString() === now.toDateString()) {
     return expiryTime >= now;
   } else {
-    return appointmentDateTime > now; 
+    return appointmentDateTime > now;
   }
 };
 
@@ -108,6 +108,18 @@ const AppointmentsDoctor = () => {
   const dateOptions = getNextFourDates();
   const [selectedDate, setSelectedDate] = useState(dateOptions[0]);
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const filteredAppointments = appointments.filter(
     (appt) =>
@@ -124,6 +136,7 @@ const AppointmentsDoctor = () => {
 
           <div
             className={style.customDropdown}
+            ref={dropdownRef}
             onClick={() => setIsOpen(!isOpen)}
           >
             <div className={style.selected}>{selectedDate}</div>
