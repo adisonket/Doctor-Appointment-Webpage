@@ -183,14 +183,6 @@ function DoctorEditProfile() {
             <div className={`${style.doctoredit_preview_item} ${doctorData.imr_registration_no ? style.centered : ''}`}>
               <strong>IMR Registration No.: </strong> {doctorData.imr_registration_no}
             </div>
-            {/* <p><strong>Name: </strong> {doctorData.firstname} {doctorData.lastname}</p> */}
-            {/* <p><strong>Last Name:</strong> {doctorData.lastname}</p> */}
-            {/* <p><strong>Email: </strong> {doctorData.email}</p> */}
-            {/* <p><strong>Phone: </strong> {doctorData.phone}</p> */}
-            {/* <p><strong>Specialty: </strong> {doctorData.specialty}</p> */}
-            {/* <p><strong>Years of Experience:</strong> {doctorData.years_of_experience}</p> */}
-            {/* <p><strong>Years of Experience: </strong> {experienceOptions[doctorData.years_of_experience] || ' '}</p> */}
-            {/* <p><strong>IMR Registration No.: </strong> {doctorData.imr_registration_no}</p> */}
           </div>
         </div>
       </div>
