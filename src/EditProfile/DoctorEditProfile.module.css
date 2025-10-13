@@ -27,14 +27,6 @@
     background-color: rgba(20, 20, 20, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('/src/assets/images/doctoredit.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 15px;
-    padding: 20px;
-    backdrop-filter: blur(5px); */
 }
 
 .doctoredit_form_container{
@@ -63,20 +55,6 @@
   scrollbar-width: thin;
   scrollbar-color: #4B9B6E #4B9B6E;
 }
-
-/* .doctoredit_form input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="password"],
-select{
-    background-color: #424242be;
-    color: #ffffff75;
-    border: 1px solid #1B5E3A;
-    padding: 8px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-} */
 
 .doctoredit_form input:focus, select:focus {
     background-color: #262626;
@@ -109,8 +87,11 @@ select{
     padding: 7px;
     margin-top: 13px;
     margin-bottom: 10px;
-    border-radius: 4px;
+    border-radius: 5px;
+    background-color: #424242be;
+    color: #ffffff75;
     border: 1px solid #1B5E3A;
+    transition: all 0.3s ease;
 }
 
 .doctoredit_contact{
@@ -126,7 +107,10 @@ select{
     margin-top: 13px;
     margin-bottom: 10px;
     border-radius: 4px;
+    background-color: #424242be;
+    color: #ffffff75;
     border: 1px solid #1B5E3A;
+    transition: all 0.3s ease;
 }
 
 .doctoredit_selection{
@@ -141,7 +125,10 @@ select{
     padding: 3px;
     margin-bottom: 10px;
     border-radius: 4px;
+    background-color: #424242be;
+    color: #ffffff75;
     border: 1px solid #1B5E3A;
+    transition: all 0.3s ease;
 }
 
 .doctoredit_registration_no{
@@ -158,7 +145,10 @@ select{
     margin-top: 20px;
     margin-bottom: 10px;
     border-radius: 4px;
+    background-color: #424242be;
+    color: #ffffff75;
     border: 1px solid #1B5E3A;
+    transition: all 0.3s ease;
 }
 
 .doctoredit_file_input {
@@ -224,11 +214,6 @@ select{
   }
 }
 
-/* .form input[type="file"] {
-    margin-top: 0px;
-} */
-
-
 .doctoredit_preview_container {
     margin-top: 13px;
     width: 479px;
@@ -253,10 +238,6 @@ select{
     font-size: 16px;
     color: #ddd;
 }
-
-/* .centered {
-    text-align: center;
-} */
 
 .doctoredit_preview_image {
     width: 150px;
