@@ -6,6 +6,7 @@ import AppointmentsPatient from './Appointments/AppointmentsPatient';
 import UserLogin from './components/Login/UserLogin.jsx'
 import "@lottiefiles/lottie-player";
 import DoctorLogin from './components/Login/DoctorLogin.jsx'
+import DoctorEditProfile from './EditProfile/DoctorEditProfile.jsx'
 import AdminLogin from './components/Login/AdminLogin.jsx'
 import Payment from './components/Login/Payment.jsx'
 import ReviewSuccess from './components/Login/Review.jsx'
@@ -21,6 +22,7 @@ function App() {
           <Route path="/appointmentpatient" element={<AppointmentsPatient />} />
           <Route path="/userlogin" element={<UserLogin />} />
           <Route path="/doclogin" element={<DoctorLogin />} />
+          <Route path="/doctoreditprofile" element={<DoctorEditProfile />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/review" element={<ReviewSuccess />} />
