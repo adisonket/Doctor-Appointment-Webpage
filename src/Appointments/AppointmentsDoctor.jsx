@@ -165,7 +165,10 @@ const AppointmentsDoctor = () => {
           </div>
         </div>
 
-        <div className={style.appointmentInfo}>
+        <div
+          key={selectedDate}
+          className={`${style.appointmentInfo} ${style.fadeIn}`}
+        >
           {filteredAppointments.length > 0 ? (
             filteredAppointments.map((appt) => (
               <div className={style.appointments} key={appt.appointmentId}>
