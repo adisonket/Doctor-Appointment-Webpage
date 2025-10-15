@@ -6,15 +6,10 @@
   height: 99.7vh;
   padding: 20px;
   font-family: "Open Sans", sans-serif;
-  background-image: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.3)
-    ),
-    url("/src/assets/images/doctorback2.jpg");
+  background-image: linear-gradient(90deg, rgb(0 0 0 / 30%), rgb(0 0 0)), url('/src/assets/images/doctorback2.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .patienteditPage {
