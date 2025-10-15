@@ -1,4 +1,8 @@
 .patient_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 99.7vh;
   padding: 20px;
   font-family: "Open Sans", sans-serif;
@@ -15,8 +19,9 @@
 
 .patienteditPage {
   display: flex;
-  gap: 20px;
-  justify-content: space-around;
+  padding: 1px 200px;
+  gap: 40px;
+  /* justify-content: space-around; */
   align-items: flex-start;
   color: #ddd;
   
@@ -26,8 +31,9 @@
 .patient_formSection {
   width: 55rem;
   height: auto;
-  margin-top: 2rem;
+  /* margin-top: 1.5rem; */
   padding: 25px;
+  text-align: center;
   /* border-radius: 15px; */
   /* background-color: rgba(20, 20, 20, 0.7); */
   /* backdrop-filter: blur(10px);
@@ -44,8 +50,10 @@
 
 .patient_form {
   display: flex;
+  margin-top: 20px;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
+  text-align: left;
 }
 
 .patient_rowTwo {
@@ -54,7 +62,7 @@
 }
 
 .patient_pname{
-  width: 240px;
+  width: 220px;
   height: 40px;
   padding: 10px;
   border-radius: 6px;
@@ -64,6 +72,14 @@
   color: white;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.patient_pname:hover,
+.patient_pname:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(75, 155, 110, 0.6);
+  outline: none;
+}
+
 
 .patient_pdate{
   width: 457px;
@@ -75,7 +91,14 @@
   background-color: #333;
   color: white;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
+  /* cursor: pointer; */
+}
+
+.patient_pdate:hover,
+.patient_pdate:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(75, 155, 110, 0.6);
+  outline: none;
 }
 
 .patient_textarea {
@@ -89,13 +112,15 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover and focus effect */
-.patient_pdate:hover,
-.patient_pdate:focus {
+.patient_textarea:hover,
+.patient_textarea:focus {
   transform: scale(1.02);
   box-shadow: 0 0 8px rgba(75, 155, 110, 0.6);
   outline: none;
 }
+
+
+/* Hover and focus effect */
 
 /* Placeholder color for browsers that support it */
 /* .inputGroup input[type="date"]::-webkit-datetime-edit-text,
@@ -138,6 +163,7 @@
 
 .patient_password {
   display: flex;
+  margin-top: 13px;
   gap: 20px;
 }
 
@@ -147,7 +173,8 @@
 
 .patient_passwordWrapper_input {
   margin-top: 10px;
-  width: 183px;
+  width: 218px;
+  height: 40px;
   padding: 10px;
   padding-right: 35px;
   border-radius: 6px;
@@ -158,7 +185,6 @@
 }
 
 .patient_eyeIcon{
-  margin-top: 6.5px;
   font-size: 13px;
   cursor: pointer;
   color: #4B9B6E;
@@ -187,7 +213,7 @@
 /* Button */
 .patient_button {
   margin-top: 20px;
-  padding: 12px;
+  padding: 6px 10px;
   width: 130px;
   background-color: #4B9B6E;
   color: white;
@@ -230,7 +256,7 @@
 
 /* Right: Preview Section */
 .patient_previewSection {
-  width: 22rem;
+  width: 35rem;
   margin-top: 10rem;
   padding: 25px;
   /* border-radius: 15px;

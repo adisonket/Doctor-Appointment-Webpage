@@ -241,6 +241,15 @@ function PatientEditProfile() {
         </div>
       </div>
 
+      <div class="footer-bottom">
+
+                <p class="copyright">
+                  &copy; 2025 DOCHUB. All Rights Reserved | Crafted by <a
+                    href="https://www.linkedin.com/in/sk-toushik-mehmood-3429b1246/" target="_blank" class="link">Sk Toushik Mehmood</a>
+                </p>
+
+      </div>
+
     </div>
   );
 }
