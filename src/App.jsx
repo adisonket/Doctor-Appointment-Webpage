@@ -4,6 +4,7 @@ import Homepage from './Home/homepage';
 import AppointmentsDoctor from './Appointments/AppointmentsDoctor';
 import AppointmentsPatient from './Appointments/AppointmentsPatient';
 import UserLogin from './components/Login/UserLogin.jsx'
+import PatientEditProfile from './EditProfile/PatientEditProfile.jsx'
 import "@lottiefiles/lottie-player";
 import DoctorLogin from './components/Login/DoctorLogin.jsx'
 import DoctorEditProfile from './EditProfile/DoctorEditProfile.jsx'
@@ -21,6 +22,7 @@ function App() {
           <Route path="/appointmentdoctor" element={<AppointmentsDoctor />} />
           <Route path="/appointmentpatient" element={<AppointmentsPatient />} />
           <Route path="/userlogin" element={<UserLogin />} />
+          <Route path="/patienteditprofile" element={<PatientEditProfile />} />
           <Route path="/doclogin" element={<DoctorLogin />} />
           <Route path="/doctoreditprofile" element={<DoctorEditProfile />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
