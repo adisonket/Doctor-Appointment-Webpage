@@ -19,12 +19,15 @@
 
 .patienteditPage {
   display: flex;
-  padding: 1px 200px;
-  gap: 40px;
-  /* justify-content: space-around; */
+  height: 60rem;
+  width: 100rem;
+  gap: 33px;
   align-items: flex-start;
   color: #ddd;
-  
+  border-radius: 15px;
+  background-color: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Left: Form Section */
