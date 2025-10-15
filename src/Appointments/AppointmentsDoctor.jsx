@@ -13,7 +13,7 @@ const appointments = [
   {
     appointmentId: 2,
     appointmentDate: "15/10/2025",
-    appointmentTime: "12:00",
+    appointmentTime: "15:00",
     patientName: "Mriganka Adhikary",
     gender: "Male",
     meetLink: "https://meet.google.com/vtr-tprp-dcc",
@@ -21,7 +21,7 @@ const appointments = [
   {
     appointmentId: 3,
     appointmentDate: "15/10/2025",
-    appointmentTime: "14:00",
+    appointmentTime: "16:00",
     patientName: "Tousif Mehmood",
     gender: "Male",
     meetLink: "https://meet.google.com/vtr-tprp-dcc",
@@ -29,7 +29,7 @@ const appointments = [
   {
     appointmentId: 4,
     appointmentDate: "15/10/2025",
-    appointmentTime: "16:00",
+    appointmentTime: "17:00",
     patientName: "Soumi Ghosh",
     gender: "Female",
     meetLink: "https://meet.google.com/vtr-tprp-dcc",
