@@ -152,14 +152,19 @@
   display: flex;
   gap: 20px;
   margin-top: 5px;
-}
-
-/* Custom Radio Button Green Check */
-.patient_genderGroup{
-  accent-color: #4b9b6e; /* Modern browsers */
+  accent-color: #4b9b6e;
   cursor: pointer;
 }
 
+.patient_gGroup{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.patient_gGroupOption{
+  margin-top: 2px;
+  margin-left: 7px;
+}
 
 .patient_password {
   display: flex;

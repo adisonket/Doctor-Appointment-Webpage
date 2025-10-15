@@ -130,33 +130,36 @@ function PatientEditProfile() {
             <div className={styles.patient_inputGroup}>
               <label>Gender</label>
               <div className={styles.patient_genderGroup}>
-                <label>
+                <label className={styles.patient_gGroup}>
                   <input
                     type="radio"
                     name="gender"
                     value="Male"
                     checked={patientData.gender === "Male"}
                     onChange={handleChange}
+                    className={styles.patient_gGroupOption}
                   />{" "}
                   Male
                 </label>
-                <label>
+                <label className={styles.patient_gGroup}>
                   <input
                     type="radio"
                     name="gender"
                     value="Female"
                     checked={patientData.gender === "Female"}
                     onChange={handleChange}
+                    className={styles.patient_gGroupOption}
                   />{" "}
                   Female
                 </label>
-                <label>
+                <label className={styles.patient_gGroup}>
                   <input
                     type="radio"
                     name="gender"
                     value="Other"
                     checked={patientData.gender === "Other"}
                     onChange={handleChange}
+                    className={styles.patient_gGroupOption}
                   />{" "}
                   Other
                 </label>
