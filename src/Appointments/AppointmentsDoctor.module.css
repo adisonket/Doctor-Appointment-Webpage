@@ -9,8 +9,8 @@
 }
 
 .container{
-    width: 1200px;
-    height: 600px;
+    width: 1250px;
+    height: 610px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,9 +86,11 @@
     background: transparent;
 }
 
+
 .appointments{
     width: 90%;
     height: 200px;
+    min-height: 200px;
     border: 1px solid #1B5E3A;
     border-radius: 10px;
     margin: 20px 0;
@@ -177,5 +179,38 @@
     margin: 20px;
 }
 
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInAnim 0.5s ease-in-out;
+}
+
+.fadeOut {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeOutAnim 0.5s ease-in-out;
+}
+
+@keyframes fadeInAnim {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutAnim {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
