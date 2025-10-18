@@ -1,7 +1,7 @@
 .container {
-  width:92vw;
-  height: 150vh;
-  background: linear-gradient(to bottom, #0b0e17, #071013);
+  width:100vw;
+  /* height: 150vh; */
+  /* background: linear-gradient(to bottom, #0b0e17, #071013); */
   color: white;
   padding: 50px 60px;
 }
@@ -25,15 +25,15 @@
 }
 
 .searchInput {
-  width: 55rem;
-  padding: 15px 28px;
+  width: 79rem;
+  padding: 9px 28px;
   border-radius: 25px;
   border: 1.5px solid rgb(92, 92, 92);
   background: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.7rem;
   outline: none;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .filterContainer {
@@ -46,8 +46,8 @@
 
 .filterSelect,
 .placeSelect {
-  width: 12rem;
-  padding: 15px 12px;
+  width: 19rem;
+  padding: 12px 12px;
   border-radius: 8px;
   border: 1.5px solid rgb(92, 92, 92);
   background: none;
@@ -174,7 +174,8 @@ select option {
 .card {
   position: relative;
   background-color: #0f1624;
-  width: 220px;
+  width: 273px;
+  height: 405px;
   padding: 25px;
   border-radius: 20px;
   text-align: center;
@@ -215,26 +216,28 @@ select option {
   height: 90px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin: auto;
+  margin-bottom: 35px;
 }
 
 .name {
   color: #38e38a;
   font-weight: bold;
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
 }
 
 .designation {
   color: #cfcfcf;
-  font-size: 0.95rem;
+  margin-top: 10px;
+  /* font-size: 0.95rem; */
 }
 
 .infoRow {
   display: flex;
   justify-content: center;
   gap: 10px;
-  font-size: 0.9rem;
-  margin-top: 8px;
+  /* font-size: 0.9rem; */
+  margin-top: 15px;
 }
 
 .availabilityRow {
@@ -263,7 +266,7 @@ select option {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 28px;
 }
 
 .bookBtn {
