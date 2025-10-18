@@ -12,6 +12,8 @@ import DoctorEditProfile from './EditProfile/DoctorEditProfile.jsx';
 import AdminLogin from './components/Login/AdminLogin.jsx';
 import Payment from './components/Login/Payment.jsx';
 import ReviewSuccess from './components/Login/Review.jsx';
+import DoctorSelection from "./ChoosingDoc_web/DoctorSelection";
+import DoctorProfile from "./ChoosingDoc_web/DoctorProfile";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/review" element={<ReviewSuccess />} />
+          <Route path="/doctorselection" element={<DoctorSelection />} />
+          <Route path="/doctorprofile" element={<DoctorProfile />} />
         </Routes>
       </BrowserRouter> 
 

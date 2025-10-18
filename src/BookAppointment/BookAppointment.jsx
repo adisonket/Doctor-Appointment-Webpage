@@ -16,7 +16,7 @@ const BookAppointment = () => {
     degrees: "MBBS, MD (Cardiology)",
     specialist: "Cardiologist",
     experience: "5+ years of experience",
-    fee: "800",
+    fee: "2800",
     image: doctorImage,
     availability: {
       Monday: ["10:00 AM", "11:30 AM", "2:00 PM", "4:00 PM", "6:00 PM"],

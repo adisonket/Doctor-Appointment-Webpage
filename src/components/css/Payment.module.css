@@ -216,6 +216,7 @@ input:focus {
     font-weight: 600;
     font-size: 16px;
     transition: all 0.4s ease-out;
+    color: white;
     cursor: pointer;
 }
 
