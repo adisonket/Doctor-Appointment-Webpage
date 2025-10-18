@@ -3,14 +3,15 @@ import Preloader from './Home/preloader';
 import Homepage from './Home/homepage';
 import AppointmentsDoctor from './Appointments/AppointmentsDoctor';
 import AppointmentsPatient from './Appointments/AppointmentsPatient';
-import UserLogin from './components/Login/UserLogin.jsx'
-import PatientEditProfile from './EditProfile/PatientEditProfile.jsx'
+import UserLogin from './components/Login/UserLogin.jsx';
+import PatientEditProfile from './EditProfile/PatientEditProfile.jsx';
+import BookAppointment from './BookAppointment/BookAppointment.jsx';
 import "@lottiefiles/lottie-player";
-import DoctorLogin from './components/Login/DoctorLogin.jsx'
-import DoctorEditProfile from './EditProfile/DoctorEditProfile.jsx'
-import AdminLogin from './components/Login/AdminLogin.jsx'
-import Payment from './components/Login/Payment.jsx'
-import ReviewSuccess from './components/Login/Review.jsx'
+import DoctorLogin from './components/Login/DoctorLogin.jsx';
+import DoctorEditProfile from './EditProfile/DoctorEditProfile.jsx';
+import AdminLogin from './components/Login/AdminLogin.jsx';
+import Payment from './components/Login/Payment.jsx';
+import ReviewSuccess from './components/Login/Review.jsx';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/appointmentpatient" element={<AppointmentsPatient />} />
           <Route path="/userlogin" element={<UserLogin />} />
           <Route path="/patienteditprofile" element={<PatientEditProfile />} />
+          <Route path="/bookappointment" element={<BookAppointment />} />
           <Route path="/doclogin" element={<DoctorLogin />} />
           <Route path="/doctoreditprofile" element={<DoctorEditProfile />} />
           <Route path="/adminlogin" element={<AdminLogin />} />

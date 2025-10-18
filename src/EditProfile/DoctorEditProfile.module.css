@@ -1,18 +1,14 @@
-.body_part{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.body_part {
     height: 100vh;
-    /* padding-top: 2rem; */
+    padding-top: 40px;
     background-image: linear-gradient(90deg, rgb(0 0 0 / 30%), rgb(0 0 0)), url('/src/assets/images/doctorback2.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;
     /* backdrop-filter: blur(5px); */
 }
 
-.doctoredit_container{
+.doctoredit_container {
     display: flex;
     justify-content: space-around;
     padding: 8px;
@@ -21,15 +17,13 @@
     width: 93rem;
     margin: auto;
     margin-bottom: 40px;
-    margin-top: 10px;
-    /* padding-top: 7rem; */
     border-radius: 15px;
     background-color: rgba(20, 20, 20, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
-.doctoredit_form_container{
+.doctoredit_form_container {
     width: 27rem;
     margin-top: 15px;
     margin-left: 10px;
@@ -39,33 +33,35 @@
 }
 
 .doctoredit_form_container::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
 }
 
 .doctoredit_form_container::-webkit-scrollbar-thumb {
-  background-color: #4B9B6E;
-  border-radius: 4px;
+    background-color: #4B9B6E;
+    border-radius: 4px;
 }
 
 .doctoredit_form_container::-webkit-scrollbar-thumb:hover {
-  background-color: #4B9B6E;
+    background-color: #4B9B6E;
 }
 
 .doctoredit_form_container {
-  scrollbar-width: thin;
-  scrollbar-color: #4B9B6E #4B9B6E;
+    scrollbar-width: thin;
+    scrollbar-color: #4B9B6E #4B9B6E;
 }
 
-.doctoredit_form input:focus, select:focus {
+.doctoredit_form input:focus,
+select:focus {
     background-color: #262626;
     color: #fff;
-    border: 2px solid #1B5E3A;;
+    border: 2px solid #1B5E3A;
+    ;
     box-shadow: 0 0 10px #1B5E3A, 0 0 20px #1B5E3A;
     transition: 0.3s ease-in-out;
     outline: none;
 }
 
-.doctoredit_form input::placeholder{
+.doctoredit_form input::placeholder {
     color: #888;
 }
 
@@ -75,13 +71,13 @@
     font-weight: bold;
 }
 
-.doctoredit_name{
+.doctoredit_name {
     display: flex;
     gap: 35px;
     margin-top: 20px;
 }
 
-.doctoredit_name_input{
+.doctoredit_name_input {
     width: 180px;
     height: 35px;
     padding: 7px;
@@ -94,13 +90,13 @@
     transition: all 0.3s ease;
 }
 
-.doctoredit_contact{
+.doctoredit_contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.doctoredit_contact_input{
+.doctoredit_contact_input {
     width: 395px;
     height: 35px;
     padding: 7px;
@@ -113,13 +109,13 @@
     transition: all 0.3s ease;
 }
 
-.doctoredit_selection{
+.doctoredit_selection {
     display: flex;
     margin-top: 5px;
     gap: 35px;
 }
 
-.doctoredit_select{
+.doctoredit_select {
     width: 180px;
     height: 35px;
     padding: 3px;
@@ -131,14 +127,14 @@
     transition: all 0.3s ease;
 }
 
-.doctoredit_registration_no{
+.doctoredit_registration_no {
     display: flex;
     gap: 35px;
     margin-top: 20px;
     width: 380px;
 }
 
-.doctoredit_imr{
+.doctoredit_imr {
     width: 395px;
     height: 35px;
     padding: 7px;
@@ -160,10 +156,10 @@
     background-color: #333;
     color: #fff;
     padding: 8px 15px;
-    border-radius: 6px;  
-    cursor: pointer;  
-    font-weight: 500;  
-    border: 1px solid #1B5E3A;  
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    border: 1px solid #1B5E3A;
     transition: all 0.3s ease;
 }
 
@@ -179,7 +175,7 @@
     font-size: 14px;
 }
 
-.doctoredit_button{
+.doctoredit_button {
     margin-top: 25px;
     padding: 3px 13px;
     position: relative;
@@ -204,14 +200,14 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     animation: shimmer 2s infinite;
 }
 
 @keyframes shimmer {
-  100% {
-    left: 100%;
-  }
+    100% {
+        left: 100%;
+    }
 }
 
 .doctoredit_preview_container {
@@ -247,11 +243,15 @@
     object-fit: cover;
     display: block;
     margin: 0 auto 20px;
-    
+
     animation: bounceIn 1s ease;
     animation: rotateIn 0.8s ease;
 }
 
 .doctoredit_preview_card strong {
     font-size: 17px;
+}
+
+.bichi {
+    text-align: center;
 }
