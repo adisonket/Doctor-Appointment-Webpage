@@ -15,9 +15,9 @@
     margin-top: 40px;
     margin-left: 250px;
     background-color: #2e2f30c3;
-    height: 98vh;
+    height: 86vh;
     width: 100rem;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     font-family: "Poppins", sans-serif;
     border: #205b3c solid 2px;
@@ -34,7 +34,7 @@
 
 .imageBox {
     width: 190px;
-    height: 240px;
+    height: 180px;
     border: 2px solid #999;
     border-radius: 10px;
     background-color: white;
@@ -53,15 +53,15 @@
 .infoBox {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     text-align: left;
     font-size: 16px;
     color: #f7f3e9;
 }
 
 .para_name {
-    margin-top: 12px;
-    margin-bottom: 12px;
+    /* margin-top: 12px; */
+    margin-bottom: 16px;
     font-weight: 900;
     font-size: 40px;
     color: #2e8b57;
@@ -76,11 +76,12 @@
 
 /* --- Slider --- */
 .sliderWrapper {
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 5px;
-    margin: 20px 0;
+    margin: auto;
 }
 
 .arrow {
@@ -192,7 +193,8 @@
     width: 75rem;
     border: none;
     padding: 10px 25px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 700;
     border-radius: 8px;
     cursor: pointer;
     margin-top: 10px;

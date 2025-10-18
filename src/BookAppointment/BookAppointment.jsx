@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import styles from "./BookAppointment.module.css";
-import doctorImage from "../assets/images/doc-pic.jpeg";
+import doctorImage from "../assets/images/Doctor_about 1.jpg";
 
 const BookAppointment = () => {
   const [dates, setDates] = useState([]);
