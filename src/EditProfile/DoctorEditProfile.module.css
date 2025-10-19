@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-around;
     padding: 8px;
-    gap: 10px;
+    gap: 60px;
     height: 57rem;
     width: 93rem;
     margin: auto;
@@ -26,7 +26,7 @@
 .doctoredit_form_container {
     width: 27rem;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: -90px;
     border-radius: 15px;
     padding: 25px;
     padding-top: 0;
@@ -209,31 +209,6 @@ select:focus {
         left: 100%;
     }
 }
-
-.toast {
-    margin-right: 70px;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #1B5E3A;
-    color: white;
-    padding: 14px 22px;
-    border-radius: 6px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
-    font-weight: 600;
-    opacity: 0;
-    transform: translateY(40px);
-    animation: slideUp 0.5s forwards;
-    z-index: 999;
-}
-
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 .doctoredit_preview_container {
     margin-top: 13px;

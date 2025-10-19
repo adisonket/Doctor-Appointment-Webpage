@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import style from './DoctorEditProfile.module.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 function DoctorEditProfile() {
@@ -35,14 +37,18 @@ function DoctorEditProfile() {
     above_four: '4+ years',
   };
 
-  const [showToast, setShowToast] = useState(false);
+  // const [showToast, setShowToast] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setShowToast(true);
-
-    // Hide toast after 3 seconds
-    setTimeout(() => setShowToast(false), 3000);
+    toast.success("Profile Created Successfully", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "dark", // "light" | "colored"
+    });
   };
 
 
@@ -54,6 +60,7 @@ function DoctorEditProfile() {
     <div className={style.body_part}>
 
       <div className={style.doctoredit_container}>
+        <ToastContainer />
         <div className={style.doctoredit_form_container}>
           <form className={style.doctoredit_form} onSubmit={handleSubmit}>
             <h2>Edit Profile</h2>
@@ -167,9 +174,6 @@ function DoctorEditProfile() {
               <button type="submit" className={style.doctoredit_button}>
                 Save Changes
               </button>
-              {showToast && (
-                <div className={style.toast}>✅ Profile Updated Successfully</div>
-              )}
             </div>
 
 
