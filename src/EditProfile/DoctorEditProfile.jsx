@@ -37,10 +37,9 @@ function DoctorEditProfile() {
     above_four: '4+ years',
   };
 
-  // const [showToast, setShowToast] = useState(false);
 
   const handleSubmit = (e) => {
-    toast.success("Profile Created Successfully", {
+    toast.success("Profile Updated Successfully", {
       position: "top-center",
       autoClose: 3000,
       hideProgressBar: false,
