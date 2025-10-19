@@ -3,7 +3,7 @@ import style from './DoctorEditProfile.module.css';
 
 
 function DoctorEditProfile() {
-   const [doctorData, setDoctorData] = useState({
+  const [doctorData, setDoctorData] = useState({
     firstname: '',
     lastname: '',
     email: '',
@@ -28,24 +28,35 @@ function DoctorEditProfile() {
       });
     }
   };
-  
+
   const experienceOptions = {
     zero_to_two: '0 - 2 years',
     three_to_four: '3 - 4 years',
     above_four: '4+ years',
   };
-  
-  
-  
-  
+
+  const [showToast, setShowToast] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowToast(true);
+
+    // Hide toast after 3 seconds
+    setTimeout(() => setShowToast(false), 3000);
+  };
+
+
+
+
+
   return (
 
     <div className={style.body_part}>
 
       <div className={style.doctoredit_container}>
         <div className={style.doctoredit_form_container}>
-          <form className={style.doctoredit_form}>
-          <h2>Edit Profile</h2>
+          <form className={style.doctoredit_form} onSubmit={handleSubmit}>
+            <h2>Edit Profile</h2>
             <div className={style.doctoredit_name}>
               <input
                 type="text"
@@ -54,6 +65,7 @@ function DoctorEditProfile() {
                 onChange={handleChange}
                 placeholder='First Name'
                 className={style.doctoredit_name_input}
+                required
               />
 
               <input
@@ -63,6 +75,7 @@ function DoctorEditProfile() {
                 onChange={handleChange}
                 placeholder='Last Name'
                 className={style.doctoredit_name_input}
+                required
               />
             </div>
 
@@ -75,20 +88,23 @@ function DoctorEditProfile() {
                 onChange={handleChange}
                 placeholder='Email'
                 className={style.doctoredit_contact_input}
+                required
               />
 
               <input
                 type="tel"
                 name="phone"
                 maxlength="10"
+                minLength="10"
                 value={doctorData.phone}
                 onChange={handleChange}
                 placeholder='Phone'
                 className={style.doctoredit_contact_input}
+                required
               />
             </div>
 
-            
+
             <div className={style.doctoredit_selection}>
               <div className={style.doctoredit_specialty}>
                 <label>Specialty</label>
@@ -97,6 +113,7 @@ function DoctorEditProfile() {
                   value={doctorData.specialty}
                   onChange={handleChange}
                   className={style.doctoredit_select}
+                  required
                 >
                   <option value="">Select Specialty</option>
                   <option value="Cardiologist">Cardiologist</option>
@@ -114,6 +131,7 @@ function DoctorEditProfile() {
                   value={doctorData.years_of_experience}
                   onChange={handleChange}
                   className={style.doctoredit_select}
+                  required
                 >
                   <option value="">Experience</option>
                   {Object.entries(experienceOptions).map(([key, label]) => (
@@ -133,6 +151,7 @@ function DoctorEditProfile() {
                 onChange={handleChange}
                 placeholder='IMR Registration No.'
                 className={style.doctoredit_imr}
+                required
               />
             </div>
 
@@ -141,13 +160,19 @@ function DoctorEditProfile() {
               type="file"
               accept="image/*"
               onChange={handleImageChange}
+              required
             />
 
             <div>
               <button type="submit" className={style.doctoredit_button}>
-                  Save Changes
+                Save Changes
               </button>
+              {showToast && (
+                <div className={style.toast}>✅ Profile Updated Successfully</div>
+              )}
             </div>
+
+
           </form>
         </div>
 
@@ -191,10 +216,10 @@ function DoctorEditProfile() {
 
         <div class="footer-bottom">
 
-                  <p class="copyright">
-                    &copy; 2025 DOCHUB. All Rights Reserved | Crafted by <a
-                      href="https://www.linkedin.com/in/sk-toushik-mehmood-3429b1246/" target="_blank" class="link">Sk Toushik Mehmood</a>
-                  </p>
+          <p class="copyright">
+            &copy; 2025 DOCHUB. All Rights Reserved | Crafted by <a
+              href="https://www.linkedin.com/in/sk-toushik-mehmood-3429b1246/" target="_blank" class="link">Sk Toushik Mehmood</a>
+          </p>
 
         </div>
       </div>
