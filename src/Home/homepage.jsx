@@ -1328,14 +1328,16 @@ const Homepage = () => {
                       placeholder="Your Name"
                       autoComplete="off"
                       className="input-field"
+                      required
                     />
 
                     <input
-                      type="tel"
+                      type="email"
                       name="phone"
-                      placeholder="Phone Number"
+                      placeholder="Email Address"
                       autoComplete="off"
                       className="input-field"
+                      required
                     />
                   </div>
 
@@ -1344,6 +1346,7 @@ const Homepage = () => {
                     placeholder="Message"
                     autoComplete="off"
                     className="input-field"
+                    required
                   ></textarea>
 
                   <button type="submit" className="btn btn-secondary">
