@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-around;
     padding: 8px;
-    gap: 10px;
+    gap: 60px;
     height: 57rem;
     width: 93rem;
     margin: auto;
@@ -26,7 +26,7 @@
 .doctoredit_form_container {
     width: 27rem;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: -90px;
     border-radius: 15px;
     padding: 25px;
     padding-top: 0;

@@ -54,7 +54,7 @@ function PatientEditProfile() {
     setError("");
 
     // Show animated toast
-    toast.success("Profile Created Successfully", {
+    toast.success("Profile Updated Successfully", {
       position: "top-center",
       autoClose: 3000,
       hideProgressBar: false,
