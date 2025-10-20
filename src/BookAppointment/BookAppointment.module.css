@@ -171,6 +171,7 @@
 .timeButton:hover {
     /* background: #272727; */
     background: #2e7030;
+    transform: scale(1.07);
 }
 
 .selectedTime {
@@ -203,6 +204,7 @@
 .bookButton:hover {
     background: #2e703036;
     border: #43A047 solid 2px;
+    transform: scale(1.07);
 }
 
 .bichi{
