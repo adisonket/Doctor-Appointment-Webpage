@@ -14,6 +14,7 @@ import Payment from './components/Login/Payment.jsx';
 import ReviewSuccess from './components/Login/Review.jsx';
 import DoctorSelection from "./ChoosingDoc_web/DoctorSelection";
 import DoctorProfile from "./ChoosingDoc_web/DoctorProfile";
+import PatientProfile from "./PatientProfile/PatientProfile.jsx"
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
           <Route path="/review" element={<ReviewSuccess />} />
           <Route path="/doctorselection" element={<DoctorSelection />} />
           <Route path="/doctorprofile" element={<DoctorProfile />} />
+          <Route path="/patientprofile" element={<PatientProfile />} />
+
         </Routes>
       </BrowserRouter> 
 
