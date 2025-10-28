@@ -93,7 +93,7 @@
 .dateSlider {
     display: flex;
     align-items: center;
-    width: 77rem;
+    width: 76.9rem;
     height: 90px;
     overflow: hidden;
     scroll-behavior: smooth;
