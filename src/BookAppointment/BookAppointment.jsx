@@ -12,7 +12,7 @@ const BookAppointment = () => {
   const sliderRef = useRef(null);
 
   const doctor = {
-    name: "Dr. Arjun Mehta",
+    name: "Dr. Aadhrika Adhikary",
     degrees: "MBBS, MD (Cardiology)",
     specialist: "Cardiologist",
     experience: "5+ years of experience",
@@ -99,11 +99,19 @@ const BookAppointment = () => {
 
   // 🔹 Slider controls
   const slideLeft = () => {
-    sliderRef.current.scrollBy({ left: -250, behavior: "smooth" });
+    if (sliderRef.current) {
+      const boxWidth = sliderRef.current.firstChild.offsetWidth + 12; // width + gap
+      sliderRef.current.scrollBy({ left: -boxWidth, behavior: "smooth" });
+    }
   };
+
   const slideRight = () => {
-    sliderRef.current.scrollBy({ left: 250, behavior: "smooth" });
+    if (sliderRef.current) {
+      const boxWidth = sliderRef.current.firstChild.offsetWidth + 12;
+      sliderRef.current.scrollBy({ left: boxWidth, behavior: "smooth" });
+    }
   };
+
 
   return (
     <div className={styles.bookApp_body}>
