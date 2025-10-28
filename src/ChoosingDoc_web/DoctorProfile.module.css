@@ -43,7 +43,7 @@
 .left_part_main{
     width: 29rem;
     height: 39rem;
-    background-image: linear-gradient(178deg, rgba(0, 0, 0, 0.19), rgb(0, 14, 5)), url(src/assets/images/agamani.jpeg);
+    background-image: linear-gradient(178deg, rgba(0, 0, 0, 0.19), rgb(0, 14, 5)), url(src/assets/images/doc.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

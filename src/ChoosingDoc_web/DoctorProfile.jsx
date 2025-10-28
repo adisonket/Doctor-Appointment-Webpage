@@ -8,7 +8,7 @@ const DoctorProfile = () => {
         {/* Left Section */}
         <div className={styles.left_part}>
           <div className={styles.left_part_main}>
-            <span className={styles.left_part_first}>Agamani Banerjee</span>
+            <span className={styles.left_part_first}>Dr. Aadhrika Adhikary</span>
             <span className={styles.left_part_sec}>CARDIOLOGIST</span>
             <div className={styles.left_part_primary}>
               <div className={styles.left_part_primary_sec}>
@@ -29,28 +29,28 @@ const DoctorProfile = () => {
           <div className={styles.right_part_upper}>
             <div className={styles.right_part_divs}>
               <span className={styles.right_part_firstspan}>Username</span>
-              <span className={styles.right_part_secspan}>@banerjeeagamani</span>
+              <span className={styles.right_part_secspan}>@aadhrikaadhikary</span>
             </div>
 
             <div className={styles.right_part_divs}>
               <span className={styles.right_part_firstspan}>First Name</span>
-              <span className={styles.right_part_secspan}>Agamani</span>
+              <span className={styles.right_part_secspan}>Aadhrika</span>
             </div>
 
             <div className={styles.right_part_divs}>
               <span className={styles.right_part_firstspan}>Last Name</span>
-              <span className={styles.right_part_secspan}>Banerjee</span>
+              <span className={styles.right_part_secspan}>Adhikary</span>
             </div>
 
             <div className={styles.right_part_divs}>
               <span className={styles.right_part_firstspan}>Number</span>
-              <span className={styles.right_part_secspan}>+91 9330591139</span>
+              <span className={styles.right_part_secspan}>+91 8961953161</span>
             </div>
 
             <div className={styles.right_part_divs}>
               <span className={styles.right_part_firstspan}>Email</span>
               <span className={styles.right_part_secspan}>
-                agamanibenerjee@example.com
+                aadhrikaadhikary@example.com
               </span>
             </div>
 
