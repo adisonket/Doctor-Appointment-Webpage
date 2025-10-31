@@ -3,7 +3,9 @@ import Preloader from './Home/preloader';
 import Homepage from './Home/homepage';
 import AppointmentsDoctor from './Appointments/AppointmentsDoctor';
 import AppointmentsPatient from './Appointments/AppointmentsPatient';
-import UserLogin from './components/Login/UserLogin.jsx'
+import UserLogin from './components/Login/UserLogin.jsx';
+import PatientEditProfile from './EditProfile/PatientEditProfile.jsx';
+import BookAppointment from './BookAppointment/BookAppointment.jsx';
 import "@lottiefiles/lottie-player";
 import DoctorLogin from './components/Login/DoctorLogin.jsx'
 import DoctorEditProfile from './EditProfile/DoctorEditProfile.jsx'
@@ -13,6 +15,10 @@ import ReviewSuccess from './components/Login/Review.jsx'
 import AdminHome from './Admin/AdminHome.jsx';
 import Receipt from './components/Login/Receipt.jsx';
 import AdminUser from './Admin/AdminUser.jsx';
+import DoctorSelection from "./ChoosingDoc_web/DoctorSelection";
+import DoctorProfile from "./ChoosingDoc_web/DoctorProfile";
+import PatientProfile from "./PatientProfile/PatientProfile.jsx"
+
 
 function App() {
   return (
@@ -24,15 +30,21 @@ function App() {
           <Route path="/appointmentdoctor" element={<AppointmentsDoctor />} />
           <Route path="/appointmentpatient" element={<AppointmentsPatient />} />
           <Route path="/userlogin" element={<UserLogin />} />
+          <Route path="/patienteditprofile" element={<PatientEditProfile />} />
+          <Route path="/bookappointment" element={<BookAppointment />} />
           <Route path="/doclogin" element={<DoctorLogin />} />
           <Route path="/doctoreditprofile" element={<DoctorEditProfile />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/review" element={<ReviewSuccess />} />
           <Route path="/receipt" element={<Receipt/>} />
+          <Route path="/doctorselection" element={<DoctorSelection />} />
+          <Route path="/doctorprofile" element={<DoctorProfile />} />
+          <Route path="/patientprofile" element={<PatientProfile />} />
 
           <Route path="/adminhome" element={<AdminHome />} />
           <Route path="/adminuser" element={<AdminUser />} />
+
         </Routes>
       </BrowserRouter> 
 
