@@ -39,13 +39,6 @@
   overflow-y: auto; */
 }
 
-/* h2 {
-  text-align: center;
-  font-weight: 700;
-  color: #4b9b6e;
-  margin-bottom: 20px;
-} */
-
 .patient_form {
   display: flex;
   margin-top: 20px;
@@ -163,6 +156,11 @@
 .patient_gGroupOption {
   margin-top: 2px;
   margin-left: 7px;
+}
+
+.patient_gGroupOption:focus{
+  border: none;
+  outline: none;
 }
 
 .patient_password {

@@ -4,7 +4,7 @@ import style from "./AppointmentsDoctor.module.css";
 const appointments = [
   {
     appointmentId: 1,
-    appointmentDate: "15/10/2025",
+    appointmentDate: "02/11/2025",
     appointmentTime: "10:30",
     patientName: "Adhip Halder",
     gender: "Male",
@@ -12,7 +12,7 @@ const appointments = [
   },
   {
     appointmentId: 2,
-    appointmentDate: "15/10/2025",
+    appointmentDate: "02/11/2025",
     appointmentTime: "15:00",
     patientName: "Mriganka Adhikary",
     gender: "Male",
@@ -20,7 +20,7 @@ const appointments = [
   },
   {
     appointmentId: 3,
-    appointmentDate: "15/10/2025",
+    appointmentDate: "02/11/2025",
     appointmentTime: "16:00",
     patientName: "Tousif Mehmood",
     gender: "Male",
@@ -28,7 +28,7 @@ const appointments = [
   },
   {
     appointmentId: 4,
-    appointmentDate: "15/10/2025",
+    appointmentDate: "03/11/2025",
     appointmentTime: "17:00",
     patientName: "Soumi Ghosh",
     gender: "Female",
@@ -36,7 +36,7 @@ const appointments = [
   },
   {
     appointmentId: 5,
-    appointmentDate: "16/10/2025",
+    appointmentDate: "04/11/2025",
     appointmentTime: "10:00",
     patientName: "Sanket Adhikary",
     gender: "Male",
@@ -44,7 +44,7 @@ const appointments = [
   },
   {
     appointmentId: 6,
-    appointmentDate: "16/10/2025",
+    appointmentDate: "04/11/2025",
     appointmentTime: "11:30",
     patientName: "Priya Banerjee",
     gender: "Female",
@@ -52,7 +52,7 @@ const appointments = [
   },
   {
     appointmentId: 7,
-    appointmentDate: "16/10/2025",
+    appointmentDate: "04/11/2025",
     appointmentTime: "13:00",
     patientName: "Rahul Sharma",
     gender: "Male",
@@ -60,7 +60,7 @@ const appointments = [
   },
   {
     appointmentId: 8,
-    appointmentDate: "17/10/2025",
+    appointmentDate: "05/11/2025",
     appointmentTime: "11:00",
     patientName: "Rimita Bag",
     gender: "Female",
@@ -68,7 +68,7 @@ const appointments = [
   },
   {
     appointmentId: 9,
-    appointmentDate: "17/10/2025",
+    appointmentDate: "05/11/2025",
     appointmentTime: "16:00",
     patientName: "Raja Sen",
     gender: "Male",
@@ -76,7 +76,7 @@ const appointments = [
   },
   {
     appointmentId: 10,
-    appointmentDate: "18/10/2025",
+    appointmentDate: "31/10/2025",
     appointmentTime: "10:00",
     patientName: "Ankit Kumar",
     gender: "Male",
