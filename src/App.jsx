@@ -23,25 +23,25 @@ import PatientProfile from "./PatientProfile/PatientProfile.jsx"
 function App() {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/appointmentdoctor" element={<AppointmentsDoctor />} />
-          <Route path="/appointmentpatient" element={<AppointmentsPatient />} />
           <Route path="/userlogin" element={<UserLogin />} />
+          <Route path="/patientprofile" element={<PatientProfile />} />
           <Route path="/patienteditprofile" element={<PatientEditProfile />} />
+          <Route path="/appointmentpatient" element={<AppointmentsPatient />} />
+          <Route path="/doctorselection" element={<DoctorSelection />} />
           <Route path="/bookappointment" element={<BookAppointment />} />
           <Route path="/doclogin" element={<DoctorLogin />} />
+          <Route path="/doctorprofile" element={<DoctorProfile />} />
           <Route path="/doctoreditprofile" element={<DoctorEditProfile />} />
-          <Route path="/adminlogin" element={<AdminLogin />} />
+          <Route path="/appointmentdoctor" element={<AppointmentsDoctor />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/review" element={<ReviewSuccess />} />
           <Route path="/receipt" element={<Receipt/>} />
-          <Route path="/doctorselection" element={<DoctorSelection />} />
-          <Route path="/doctorprofile" element={<DoctorProfile />} />
-          <Route path="/patientprofile" element={<PatientProfile />} />
 
+          <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/adminhome" element={<AdminHome />} />
           <Route path="/adminuser" element={<AdminUser />} />
 
