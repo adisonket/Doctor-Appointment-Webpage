@@ -8,7 +8,7 @@ const BookAppointment = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState("");
   const [availableTimes, setAvailableTimes] = useState([]);
-  const [message, setMessage] = useState(""); // 🔹 message state
+  const [message, setMessage] = useState("");
   const sliderRef = useRef(null);
 
   const doctor = {
@@ -100,7 +100,7 @@ const BookAppointment = () => {
   // 🔹 Slider controls
   const slideLeft = () => {
     if (sliderRef.current) {
-      const boxWidth = sliderRef.current.firstChild.offsetWidth + 12; // width + gap
+      const boxWidth = sliderRef.current.firstChild.offsetWidth + 12;
       sliderRef.current.scrollBy({ left: -boxWidth, behavior: "smooth" });
     }
   };
@@ -112,11 +112,15 @@ const BookAppointment = () => {
     }
   };
 
+  // 🔹 Handle time select (allow reselection)
+  const handleTimeSelect = (time) => {
+    setSelectedTime(time === selectedTime ? "" : time);
+  };
 
   return (
     <div className={styles.bookApp_body}>
       <div className={styles.container}>
-        {/* Top Section */}
+        {/* 🩺 Top Section */}
         <div className={styles.topSection}>
           <div className={styles.imageBox}>
             <img src={doctor.image} alt="Doctor" className={styles.image} />
@@ -131,7 +135,7 @@ const BookAppointment = () => {
 
         <h2 className={styles.heading}>Book Appointment</h2>
 
-        {/* Date Slider */}
+        {/* 📅 Date Slider */}
         <div className={styles.sliderWrapper}>
           <button className={styles.arrow} onClick={slideLeft}>
             <FaArrowLeft />
@@ -157,7 +161,7 @@ const BookAppointment = () => {
           </button>
         </div>
 
-        {/* Time Section */}
+        {/* 🕓 Time Section */}
         {availableTimes.length > 0 && (
           <div className={styles.timeSection}>
             <h3>Select Time</h3>
@@ -168,8 +172,7 @@ const BookAppointment = () => {
                   className={`${styles.timeButton} ${
                     selectedTime === time ? styles.selectedTime : ""
                   }`}
-                  onClick={() => setSelectedTime(time)}
-                  disabled={selectedTime && selectedTime !== time} // 🔹 only one time selectable
+                  onClick={() => handleTimeSelect(time)}
                 >
                   {time}
                 </button>
@@ -178,7 +181,7 @@ const BookAppointment = () => {
           </div>
         )}
 
-        {/* Fee Section */}
+        {/* 💰 Fee Section */}
         {selectedTime && (
           <div className={styles.feeSection}>
             <p><strong>Consultation Fee:</strong> {doctor.fee}</p>
@@ -186,18 +189,24 @@ const BookAppointment = () => {
           </div>
         )}
 
-        {/* 🔹 Message Section */}
+        {/* 🔔 Message Section */}
         {message && <p className={styles.message}>{message}</p>}
       </div>
+
+      {/* 🔹 Footer */}
       <div className={styles.bichi}>
-
-        <div class="footer-bottom">
-
-                  <p class="copyright">
-                    &copy; 2025 DOCHUB. All Rights Reserved | Crafted by <a
-                      href="https://www.linkedin.com/in/sk-toushik-mehmood-3429b1246/" target="_blank" class="link">Sk Toushik Mehmood</a>
-                  </p>
-
+        <div className="footer-bottom">
+          <p className="copyright">
+            &copy; 2025 DOCHUB. All Rights Reserved | Crafted by{" "}
+            <a
+              href="https://www.linkedin.com/in/sk-toushik-mehmood-3429b1246/"
+              target="_blank"
+              className="link"
+              rel="noreferrer"
+            >
+              Sk Toushik Mehmood
+            </a>
+          </p>
         </div>
       </div>
     </div>
