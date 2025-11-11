@@ -18,6 +18,14 @@ import AdminUser from './Admin/AdminUser.jsx';
 import DoctorSelection from "./ChoosingDoc_web/DoctorSelection";
 import DoctorProfile from "./ChoosingDoc_web/DoctorProfile";
 import PatientProfile from "./PatientProfile/PatientProfile.jsx"
+import Prescription from './Prescription/Prescription.jsx';
+import ViewPrescription from './Prescription/ViewPrescription.jsx';
+import AdminDocDocu from './Admin/AdminDocDocu.jsx';
+import AdminDocAppointment from './Admin/AdminDocAppointment.jsx';
+import AdminPatientAppointment from './Admin/AdminPatientAppointment.jsx';
+import AdminPrescription from './Admin/AdminPrescription.jsx';
+import AdminPayment from './Admin/AdminPayment.jsx';
+import AdminMsg from './Admin/AdminMsg.jsx';
 
 
 function App() {
@@ -41,9 +49,18 @@ function App() {
           <Route path="/doctorselection" element={<DoctorSelection />} />
           <Route path="/doctorprofile" element={<DoctorProfile />} />
           <Route path="/patientprofile" element={<PatientProfile />} />
+          <Route path="/prescription" element={<Prescription/>} />
+          <Route path="/viewprescription" element={<ViewPrescription/>} />
+
 
           <Route path="/adminhome" element={<AdminHome />} />
           <Route path="/adminuser" element={<AdminUser />} />
+          <Route path="/adminuser/doc/document" element={<AdminDocDocu />} />
+          <Route path="/adminuser/doc/appointment" element={<AdminDocAppointment />} />
+          <Route path="/adminuser/patient/appointment" element={<AdminPatientAppointment />} />
+          <Route path="/adminuser/patient/appointment/prescription" element={<AdminPrescription />} />
+          <Route path="/adminpayment" element={<AdminPayment />} />
+          <Route path="/adminmsg" element={<AdminMsg />} />
 
         </Routes>
       </BrowserRouter> 
