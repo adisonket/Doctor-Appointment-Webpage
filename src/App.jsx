@@ -28,6 +28,7 @@ import AdminPayment from './Admin/AdminPayment.jsx';
 import AdminMsg from './Admin/AdminMsg.jsx';
 
 
+
 function App() {
   return (
     <>
@@ -48,16 +49,8 @@ function App() {
           <Route path="/payment" element={<Payment />} />
           <Route path="/review" element={<ReviewSuccess />} />
           <Route path="/receipt" element={<Receipt/>} />
-<<<<<<< HEAD
-          <Route path="/doctorselection" element={<DoctorSelection />} />
-          <Route path="/doctorprofile" element={<DoctorProfile />} />
-          <Route path="/patientprofile" element={<PatientProfile />} />
           <Route path="/prescription" element={<Prescription/>} />
           <Route path="/viewprescription" element={<ViewPrescription/>} />
-
-=======
->>>>>>> 10f2f0fc18c0909796818efd57c81a978edfc14b
-
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/adminhome" element={<AdminHome />} />
           <Route path="/adminuser" element={<AdminUser />} />
