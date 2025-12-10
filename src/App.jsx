@@ -51,6 +51,7 @@ function App() {
           <Route path="/receipt" element={<Receipt/>} />
           <Route path="/prescription" element={<Prescription/>} />
           <Route path="/viewprescription" element={<ViewPrescription/>} />
+
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/adminhome" element={<AdminHome />} />
           <Route path="/adminuser" element={<AdminUser />} />
