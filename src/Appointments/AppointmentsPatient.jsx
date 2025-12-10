@@ -1,5 +1,6 @@
 import { useState } from "react";
 import style from "./AppointmentsPatient.module.css";
+import { NavLink } from "react-router";
 
 const appointments = [
   {
@@ -195,16 +196,18 @@ const AppointmentsPatient = () => {
                               </span>
                             </button>
                           ) : (
-                            <button
-                              type="button"
-                              className="btn btn-secondary"
-                              disabled
-                            >
-                              <span className="text text-1">View PDF</span>
-                              <span className="text text-2" aria-hidden="true">
-                                View PDF
-                              </span>
-                            </button>
+                            <NavLink to="/viewprescription">
+                              <button
+                                type="button"
+                                className="btn btn-secondary"
+                                
+                              >
+                                <span className="text text-1">View PDF</span>
+                                <span className="text text-2" aria-hidden="true">
+                                  View PDF
+                                </span>
+                              </button>
+                            </NavLink>
                           )}
                         </td>
                       </tr>

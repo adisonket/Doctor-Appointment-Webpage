@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "./Prescription.module.css";
 import doctorPic from "../assets/images/Doctor_about 2.jpg"; 
 import Logo from "../assets/images/doclogo2.png"; 
+import { NavLink } from "react-router";
 
 export default function Prescription() {
   const [text, setText] = useState("");
@@ -67,6 +68,7 @@ export default function Prescription() {
 
 
         </div>
+        <NavLink to="/viewprescription">
           <button className={styles.continueApplication}>
             <div>
               <div className={styles.pencil}></div>
@@ -79,8 +81,9 @@ export default function Prescription() {
                 <div className={styles.paper}></div>
               </div>
             </div>
-            Submit 
+            Submit
           </button>
+        </NavLink>
       </div>
     </div>
 
