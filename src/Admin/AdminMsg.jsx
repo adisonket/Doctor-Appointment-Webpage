@@ -44,12 +44,12 @@ const AdminMsg = () => {
         
                         <tbody>
                             <tr>
-                                <td>dfdf</td>
-                                <td>fsdfsf</td>
-                                <td>dfdsfd</td>
-                                <td>dhchjdhschsg</td>
-                                <td>dhchjdhschsg</td>
-                                <td>dhchjdhschsg</td>
+                                <td>1</td>
+                                <td>Adhip Halder</td>
+                                <td>adhiphalder8585@gmail.com</td>
+                                <td>Good Service</td>
+                                <td>10/12/2025</td>
+                                <td>10:20</td>
                                 <td className={style.buttonContainer}>
         
                                     <DeleteButton />
