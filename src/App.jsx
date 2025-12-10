@@ -26,6 +26,7 @@ import AdminPatientAppointment from './Admin/AdminPatientAppointment.jsx';
 import AdminPrescription from './Admin/AdminPrescription.jsx';
 import AdminPayment from './Admin/AdminPayment.jsx';
 import AdminMsg from './Admin/AdminMsg.jsx';
+import VerifyDoctor from './VerifyDoc/VerifyDoctor.jsx';
 
 
 
@@ -45,6 +46,7 @@ function App() {
           <Route path="/doclogin" element={<DoctorLogin />} />
           <Route path="/doctorprofile" element={<DoctorProfile />} />
           <Route path="/doctoreditprofile" element={<DoctorEditProfile />} />
+          <Route path="/verifydoctor" element={<VerifyDoctor />} />
           <Route path="/appointmentdoctor" element={<AppointmentsDoctor />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/review" element={<ReviewSuccess />} />
