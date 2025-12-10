@@ -118,6 +118,8 @@ const AppointmentsDoctor = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+  const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -226,7 +228,11 @@ const AppointmentsDoctor = () => {
                 </table>
 
                 <div className={style.buttonContainer}>
-                  <button type="submit" className="btn btn-secondary">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    onClick={() => setShowModal(true)}
+                  >
                     <span className="text text-1">Documents</span>
                     <span className="text text-2" aria-hidden="true">
                       Documents
@@ -242,6 +248,20 @@ const AppointmentsDoctor = () => {
           )}
         </div>
       </div>
+
+      {showModal && (
+        <div className={style.modalOverlay} onClick={() => setShowModal(false)}>
+          <div
+            className={style.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3>No Document Available</h3>
+            <button className={style.closeBtn} onClick={() => setShowModal(false)}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="footer-bottom">
         <p className="copyright">

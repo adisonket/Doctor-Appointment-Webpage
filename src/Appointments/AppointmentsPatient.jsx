@@ -38,15 +38,15 @@ const appointments = [
     appointmentId: 5,
     drName: "Dr. Ram Ganguly",
     drRole: "Consultant - ENT Surgery",
-    appointmentDate: "12/11/2025",
+    appointmentDate: "12/12/2025",
     appointmenTime: "16:00",
     meetLink: "https://meet.google.com/vtr-tprp-dcc",
   },
-    {
+  {
     appointmentId: 6,
     drName: "Dr. Shyam Das",
     drRole: "Consultant - Orthopaedic (Hand & Wrist) Surgeon",
-    appointmentDate: "13/11/2025",
+    appointmentDate: "13/12/2025",
     appointmenTime: "10:00",
     meetLink: "https://meet.google.com/vtr-tprp-dcc",
   },
@@ -54,6 +54,7 @@ const appointments = [
 
 const AppointmentsPatient = () => {
   const [activeTab, setActiveTab] = useState("upcoming");
+  const [showModal, setShowModal] = useState(false);
 
   const DateTime = (dateStr, timeStr) => {
     const [day, month, year] = dateStr.split("/").map(Number);
@@ -86,7 +87,6 @@ const AppointmentsPatient = () => {
       appt.appointmentDate,
       appt.appointmenTime
     );
-
     return (
       appointmentDateTime.getTime() + fiveMinutes < now.getTime() &&
       appointmentDateTime >= fourDaysBefore
@@ -101,6 +101,7 @@ const AppointmentsPatient = () => {
       <div className={style.title}>
         <h1>My Appointments</h1>
       </div>
+
       <div className={style.container}>
         <div className={style.header}>
           <div className={style.subheader}>
@@ -134,6 +135,7 @@ const AppointmentsPatient = () => {
                 appt.appointmentDate,
                 appt.appointmenTime
               );
+
               const isPast =
                 appointmentDateTime.getTime() + fiveMinutes < now.getTime();
 
@@ -168,22 +170,42 @@ const AppointmentsPatient = () => {
                           </p>
                         </td>
                       </tr>
+
                       <tr>
                         <td id={style.drRole}>
                           <h5>{appt.drRole}</h5>
                         </td>
+
                         <td>
                           <p>
                             <b>Time :</b> {appt.appointmenTime}
                           </p>
                         </td>
-                        <td colSpan="3">
-                          <button type="submit" className="btn btn-secondary">
-                            <span className="text text-1">View PDF</span>
-                            <span className="text text-2" aria-hidden="true">
-                              View PDF
-                            </span>
-                          </button>
+
+                        <td>
+                          {activeTab === "upcoming" ? (
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              onClick={() => setShowModal(true)}
+                            >
+                              <span className="text text-1">View PDF</span>
+                              <span className="text text-2" aria-hidden="true">
+                                View PDF
+                              </span>
+                            </button>
+                          ) : (
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              disabled
+                            >
+                              <span className="text text-1">View PDF</span>
+                              <span className="text text-2" aria-hidden="true">
+                                View PDF
+                              </span>
+                            </button>
+                          )}
                         </td>
                       </tr>
                     </tbody>
@@ -198,6 +220,28 @@ const AppointmentsPatient = () => {
           )}
         </div>
       </div>
+      {showModal && (
+        <div
+          className={style.modalOverlay}
+          onClick={() => setShowModal(false)}
+        >
+          <div
+            className={style.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3>No PDF Available</h3>
+
+            <div className={style.modalButtonWrapper}>
+              <button
+                className={style.closeBtn}
+                onClick={() => setShowModal(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="footer-bottom">
         <p className="copyright">
