@@ -16,7 +16,7 @@ import Category5 from "../assets/images/Cardiologist.png"
 import Strength1 from "../assets/images/booking.png"
 import Strength2 from "../assets/images/trusted.png"
 import Strength3 from "../assets/images/availability.png"
-import Strength4 from "../assets/images/secure.png" 
+import Strength4 from "../assets/images/secure.png"
 import AboutSlide1 from "../assets/images/about_slide1.jpg"
 import AboutSlide2 from "../assets/images/about_slide2.jpg"
 import AboutSlide3 from "../assets/images/about_slide3.jpg"
@@ -26,6 +26,7 @@ import Avater from "../assets/images/testi-avatar.jpg"
 import formPattern from "../assets/images/form-pattern.png";
 import footerBg from "../assets/images/footer-bg 3.jpg";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -37,34 +38,34 @@ const Homepage = () => {
       if (!elements) return;
       elements.forEach((el) => el?.addEventListener(eventType, callback));
     };
-  
+
     const removeEventOnElements = (elements, eventType, callback) => {
       if (!elements) return;
       elements.forEach((el) => el?.removeEventListener(eventType, callback));
     };
-  
+
     /**
      * NAVBAR
      */
     const navbar = document.querySelector("[data-navbar]");
     const navTogglers = document.querySelectorAll("[data-nav-toggler]");
     const overlay = document.querySelector("[data-overlay]");
-  
+
     const toggleNavbar = () => {
       navbar?.classList.toggle("active");
       overlay?.classList.toggle("active");
       document.body.classList.toggle("nav-active");
     };
-  
+
     addEventOnElements(navTogglers, "click", toggleNavbar);
-  
+
     /**
      * HEADER & BACK TOP BTN
      */
     const header = document.querySelector("[data-header]");
     const backTopBtn = document.querySelector("[data-back-top-btn]");
     let lastScrollPos = 0;
-  
+
     const hideHeader = () => {
       const isScrollBottom = lastScrollPos < window.scrollY;
       if (isScrollBottom) {
@@ -74,7 +75,7 @@ const Homepage = () => {
       }
       lastScrollPos = window.scrollY;
     };
-  
+
     const handleScroll = () => {
       if (window.scrollY >= 50) {
         header?.classList.add("active");
@@ -86,51 +87,51 @@ const Homepage = () => {
       }
     };
     window.addEventListener("scroll", handleScroll);
-  
+
     /**
      * HERO SLIDER
      */
     const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
     const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
     const heroSliderNextBtn = document.querySelector("[data-next-btn]");
-  
+
     let currentSlidePos = 0;
     let lastActiveSliderItem = heroSliderItems[0];
     let autoSlideInterval;
-  
+
     const updateSliderPos = () => {
       lastActiveSliderItem?.classList.remove("active");
       heroSliderItems[currentSlidePos]?.classList.add("active");
       lastActiveSliderItem = heroSliderItems[currentSlidePos];
     };
-  
+
     const slideNext = () => {
       currentSlidePos =
         currentSlidePos >= heroSliderItems.length - 1 ? 0 : currentSlidePos + 1;
       updateSliderPos();
     };
-  
+
     const slidePrev = () => {
       currentSlidePos =
         currentSlidePos <= 0 ? heroSliderItems.length - 1 : currentSlidePos - 1;
       updateSliderPos();
     };
-  
+
     heroSliderNextBtn?.addEventListener("click", slideNext);
     heroSliderPrevBtn?.addEventListener("click", slidePrev);
-  
+
     const autoSlide = () => {
       autoSlideInterval = setInterval(slideNext, 7000);
     };
     window.addEventListener("load", autoSlide);
-  
+
     addEventOnElements(
       [heroSliderNextBtn, heroSliderPrevBtn],
       "mouseover",
       () => clearInterval(autoSlideInterval)
     );
     addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide);
-  
+
     /**
      * PARALLAX EFFECT
      */
@@ -140,14 +141,14 @@ const Homepage = () => {
       let y = (event.clientY / window.innerHeight) * 10 - 5;
       x = x - x * 2;
       y = y - y * 2;
-  
+
       parallaxItems.forEach((item) => {
         const speed = Number(item.dataset.parallaxSpeed);
         item.style.transform = `translate3d(${x * speed}px, ${y * speed}px, 0px)`;
       });
     };
     window.addEventListener("mousemove", handleMouseMove);
-  
+
     /**
      * RIPPLE EFFECT
      */
@@ -159,7 +160,7 @@ const Homepage = () => {
         el.classList.add("ripple");
       });
     });
-  
+
     /**
      * MOUSE MOTION BLOB
      */
@@ -172,7 +173,7 @@ const Homepage = () => {
       );
     };
     window.addEventListener("pointermove", handlePointerMove);
-  
+
     /**
      * MOUSE MOTION ABOUT US
      */
@@ -182,27 +183,27 @@ const Homepage = () => {
       const { clientX: x, clientY: y } = e;
       const centerX = innerWidth / 2;
       const centerY = innerHeight / 2;
-  
+
       const rotateY = (x - centerX) / 70;
       const rotateX = -(y - centerY) / 70;
-  
+
       cards.forEach((card) => {
         const img = card.querySelector("img");
         if (img)
           img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
       });
     };
-  
+
     const handleMouseLeave = () => {
       cards.forEach((card) => {
         const img = card.querySelector("img");
         if (img) img.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
       });
     };
-  
+
     document.addEventListener("mousemove", handleCardMove);
     document.addEventListener("mouseleave", handleMouseLeave);
-  
+
     /**
      * ABOUT US SLIDER
      */
@@ -214,20 +215,20 @@ const Homepage = () => {
     let thumbnailItemsDom = thumbnailBorderDom?.querySelectorAll(".item");
     let timeRunning = 3000;
     let timeAutoNext = 7000;
-  
+
     if (thumbnailBorderDom && thumbnailItemsDom?.length) {
       thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
     }
-  
+
     let runTimeOut;
     let runNextAuto = setTimeout(() => {
       nextDom?.click();
     }, timeAutoNext);
-  
+
     const showSlider = (type) => {
       const SliderItemsDom = SliderDom?.querySelectorAll(".carousel .list .item");
       let thumbnailItemsDom = document.querySelectorAll(".carousel .thumbnail .item");
-  
+
       if (type === "next") {
         SliderDom?.appendChild(SliderItemsDom[0]);
         thumbnailBorderDom?.appendChild(thumbnailItemsDom[0]);
@@ -239,22 +240,22 @@ const Homepage = () => {
         );
         carouselDom?.classList.add("prev");
       }
-  
+
       clearTimeout(runTimeOut);
       runTimeOut = setTimeout(() => {
         carouselDom?.classList.remove("next");
         carouselDom?.classList.remove("prev");
       }, timeRunning);
-  
+
       clearTimeout(runNextAuto);
       runNextAuto = setTimeout(() => {
         nextDom?.click();
       }, timeAutoNext);
     };
-  
+
     nextDom?.addEventListener("click", () => showSlider("next"));
     prevDom?.addEventListener("click", () => showSlider("prev"));
-  
+
     /**
      * CLEANUP
      */
@@ -273,18 +274,18 @@ const Homepage = () => {
       clearTimeout(runTimeOut);
       clearTimeout(runNextAuto);
     };
-  }, []);  
+  }, []);
 
   return (
     <>
 
-    {/* -#HEADER */}
+      {/* -#HEADER */}
 
       <header class="header" data-header>
         <div class="container">
 
           <a href="#" class="logo">
-            <img src={Logo} width="160" height="50" alt="Dochub - Home" />  
+            <img src={Logo} width="160" height="50" alt="Dochub - Home" />
           </a>
 
           <nav class="navbar" data-navbar>
@@ -294,7 +295,7 @@ const Homepage = () => {
             </button>
 
             <a href="#" class="logo">
-              <img src={Logo} width="160" height="50" alt="Dochub - Home" />  
+              <img src={Logo} width="160" height="50" alt="Dochub - Home" />
             </a>
 
             <ul class="navbar-list">
@@ -335,11 +336,18 @@ const Homepage = () => {
 
           </nav>
 
-          <a href="#" class="btn btn-secondary">
+          <NavLink className="btn btn-secondary" to="/doctorselection">
+            <span className="text text-1">Find A DOCTOR</span>
+            <span className="text text-2" aria-hidden="true">
+              Find A Doctor
+            </span>
+          </NavLink>
+
+          {/* <a href="#" class="btn btn-secondary">
             <span class="text text-1">Find A DOCTOR</span>
 
             <span class="text text-2" aria-hidden="true">Find A Doctor</span>
-          </a>
+          </a> */}
 
           <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
             <span class="line line-1"></span>
@@ -366,13 +374,13 @@ const Homepage = () => {
               <li class="slider-item active" data-hero-slider-item>
 
                 <div class="slider-bg">
-                  <img src={HeroSlide1} width="1880" height="950" alt="" class="img-cover"/>
+                  <img src={HeroSlide1} width="1880" height="950" alt="" class="img-cover" />
                 </div>
 
                 <p class="label-2 section-subtitle slider-reveal">Book Anywhere</p>
 
                 <h1 class="display-1 hero-title slider-reveal">
-                  The smarter way to<br/>
+                  The smarter way to<br />
                   see your doctor
                 </h1>
 
@@ -380,24 +388,24 @@ const Homepage = () => {
                   Say goodbye to waiting rooms
                 </p>
 
-                <a href="#" class="btn btn-primary slider-reveal">
+                <NavLink to="/doctorselection" className="btn btn-primary slider-reveal">
                   <span class="text text-1">View Our Doctors</span>
 
                   <span class="text text-2" aria-hidden="true">View Our Doctors</span>
-                </a>
+                </NavLink>
 
               </li>
 
               <li class="slider-item" data-hero-slider-item>
 
                 <div class="slider-bg">
-                  <img src={HeroSlide2} width="1880" height="950" alt="" class="img-cover"/>
+                  <img src={HeroSlide2} width="1880" height="950" alt="" class="img-cover" />
                 </div>
 
                 <p class="label-2 section-subtitle slider-reveal">delightful experience</p>
 
                 <h1 class="display-1 hero-title slider-reveal">
-                  Skip the wait <br/>
+                  Skip the wait <br />
                   see your doctor
                 </h1>
 
@@ -405,24 +413,24 @@ const Homepage = () => {
                   Say goodbye to waiting rooms
                 </p>
 
-                <a href="#" class="btn btn-primary slider-reveal">
+                <NavLink to="/doctorselection" className="btn btn-primary slider-reveal">
                   <span class="text text-1">View Our Doctors</span>
 
                   <span class="text text-2" aria-hidden="true">View Our Doctors</span>
-                </a>
+                </NavLink>
 
               </li>
 
               <li class="slider-item" data-hero-slider-item>
 
                 <div class="slider-bg">
-                  <img src={HeroSlide3} width="1880" height="950" alt="" class="img-cover"/>
+                  <img src={HeroSlide3} width="1880" height="950" alt="" class="img-cover" />
                 </div>
 
                 <p class="label-2 section-subtitle slider-reveal">Your wellness, one click away</p>
 
                 <h1 class="display-1 hero-title slider-reveal">
-                  Where healing begins <br/>
+                  Where healing begins <br />
                   with booking
                 </h1>
 
@@ -430,11 +438,11 @@ const Homepage = () => {
                   Say goodbye to waiting rooms
                 </p>
 
-                <a href="#" class="btn btn-primary slider-reveal">
+                <NavLink to="/doctorselection" className="btn btn-primary slider-reveal">
                   <span class="text text-1">View Our Doctors</span>
 
                   <span class="text text-2" aria-hidden="true">View Our Doctors</span>
-                </a>
+                </NavLink>
 
               </li>
 
@@ -448,69 +456,69 @@ const Homepage = () => {
               <ion-icon name="chevron-forward"></ion-icon>
             </button>
 
-            <a href="#" class="hero-btn has-after">
-              <img src={BookingIcon} width="48" height="48" alt="booking icon"/>
+            <NavLink to="/doctorselection" className="hero-btn has-after">
+              <img src={BookingIcon} width="48" height="48" alt="booking icon" />
 
               <span class="label-2 text-center span">Book A Doctor</span>
-            </a>
+            </NavLink>
 
           </section>
 
           <section class="section service" aria-label="service">
             <div class="doc-ele1">
-              <img src={DocEle4} alt=""/>
+              <img src={DocEle4} alt="" />
             </div>
 
             <div class="doc-ele2">
-              <img src={DocEle7} alt=""/>
+              <img src={DocEle7} alt="" />
             </div>
 
             <div class="cate-head">
               <div class="cate-content">
                 <h1>Find by Speciality</h1>
                 <p>
-                  Simply browse through our extensive list of trusted doctors,<br/>
+                  Simply browse through our extensive list of trusted doctors,<br />
                   schedule your appointment hassle-free.
                 </p>
               </div>
             </div>
 
             <div class="cate-logo">
-              <a href="" class="logo-item">
+              <NavLink to="/doctorselection" className="logo-item">
                 <div class="gp">
-                  <img src={Category1} alt="General Physician"/>
+                  <img src={Category1} alt="General Physician" />
                 </div>
                 <p>General Physician</p>
-              </a>
+              </NavLink>
 
-              <a href="" class="logo-item">
+              <NavLink to="/doctorselection" className="logo-item">
                 <div class="gp">
-                  <img src={Category2} alt="Dentist"/>
+                  <img src={Category2} alt="Dentist" />
                 </div>
                 <p>Dentist</p>
-              </a>
+              </NavLink>
 
-              <a href="" class="logo-item">
+              <NavLink to="/doctorselection" className="logo-item">
                 <div class="gp">
-                  <img src={Category3} alt="Gynecologist"/>
+                  <img src={Category3} alt="Gynecologist" />
 
                 </div>
                 <p>Gynecologist</p>
-              </a>
+              </NavLink>
 
-              <a href="" class="logo-item">
+              <NavLink to="/doctorselection" className="logo-item">
                 <div class="gp">
-                  <img src={Category4} alt="Orthopedic"/>
+                  <img src={Category4} alt="Orthopedic" />
                 </div>
                 <p>Orthopedic</p>
-              </a>
+              </NavLink>
 
-              <a href="" class="logo-item">
+              <NavLink to="/doctorselection" className="logo-item">
                 <div class="gp">
-                  <img src={Category5} alt="Cardiologist"/>
+                  <img src={Category5} alt="Cardiologist" />
                 </div>
                 <p>Cardiologist</p>
-              </a>
+              </NavLink>
             </div>
 
           </section>
@@ -532,7 +540,7 @@ const Homepage = () => {
                 <div class="card-content">
                   <div class="card-image">
                     <div class="card-image-container">
-                      <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg" alt="Profile Image"/>
+                      <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg" alt="Profile Image" />
                     </div>
                     <div class="card-glow"></div>
                   </div>
@@ -591,7 +599,7 @@ const Homepage = () => {
                 <div class="card-content">
                   <div class="card-image">
                     <div class="card-image-container">
-                      <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg" alt="Profile Image"/>
+                      <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg" alt="Profile Image" />
                     </div>
                     <div class="card-glow"></div>
                   </div>
@@ -649,7 +657,7 @@ const Homepage = () => {
                 <div class="card-content">
                   <div class="card-image">
                     <div class="card-image-container">
-                      <img src="https://images.pexels.com/photos/5214995/pexels-photo-5214995.jpeg" alt="Profile Image"/>
+                      <img src="https://images.pexels.com/photos/5214995/pexels-photo-5214995.jpeg" alt="Profile Image" />
                     </div>
                     <div class="card-glow"></div>
                   </div>
@@ -707,7 +715,7 @@ const Homepage = () => {
                 <div class="card-content">
                   <div class="card-image">
                     <div class="card-image-container">
-                      <img src="https://images.pexels.com/photos/4270363/pexels-photo-4270363.jpeg" alt="Profile Image"/>
+                      <img src="https://images.pexels.com/photos/4270363/pexels-photo-4270363.jpeg" alt="Profile Image" />
                     </div>
                     <div class="card-glow"></div>
                   </div>
@@ -765,7 +773,7 @@ const Homepage = () => {
                 <div class="card-content">
                   <div class="card-image">
                     <div class="card-image-container">
-                      <img src="https://images.pexels.com/photos/32351311/pexels-photo-32351311.jpeg" alt="Profile Image"/>
+                      <img src="https://images.pexels.com/photos/32351311/pexels-photo-32351311.jpeg" alt="Profile Image" />
                     </div>
                     <div class="card-glow"></div>
                   </div>
@@ -823,7 +831,7 @@ const Homepage = () => {
                 <div class="card-content">
                   <div class="card-image">
                     <div class="card-image-container">
-                      <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg" alt="Profile Image"/>
+                      <img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg" alt="Profile Image" />
                     </div>
                     <div class="card-glow"></div>
                   </div>
@@ -881,7 +889,7 @@ const Homepage = () => {
                 <div class="card-content">
                   <div class="card-image">
                     <div class="card-image-container">
-                      <img src="https://images.pexels.com/photos/5214995/pexels-photo-5214995.jpeg" alt="Profile Image"/>
+                      <img src="https://images.pexels.com/photos/5214995/pexels-photo-5214995.jpeg" alt="Profile Image" />
                     </div>
                     <div class="card-glow"></div>
                   </div>
@@ -939,7 +947,7 @@ const Homepage = () => {
                 <div class="card-content">
                   <div class="card-image">
                     <div class="card-image-container">
-                      <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg" alt="Profile Image"/>
+                      <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg" alt="Profile Image" />
                     </div>
                     <div class="card-glow"></div>
                   </div>
@@ -1035,7 +1043,7 @@ const Homepage = () => {
                 <div class="strength-content">
                   <div class="back">
                     <div class="back-content">
-                      <img src={Strength1} alt=""/>
+                      <img src={Strength1} alt="" />
                     </div>
                   </div>
                   <div class="front">
@@ -1066,7 +1074,7 @@ const Homepage = () => {
                 <div class="strength-content">
                   <div class="back">
                     <div class="back-content">
-                      <img src={Strength2} alt=""/>
+                      <img src={Strength2} alt="" />
                     </div>
                   </div>
                   <div class="front">
@@ -1097,7 +1105,7 @@ const Homepage = () => {
                 <div class="strength-content">
                   <div class="back">
                     <div class="back-content">
-                      <img src={Strength3} alt=""/>
+                      <img src={Strength3} alt="" />
                     </div>
                   </div>
                   <div class="front">
@@ -1128,7 +1136,7 @@ const Homepage = () => {
                 <div class="strength-content">
                   <div class="back">
                     <div class="back-content">
-                      <img src={Strength4} alt=""/>
+                      <img src={Strength4} alt="" />
                     </div>
                   </div>
                   <div class="front">
@@ -1163,7 +1171,7 @@ const Homepage = () => {
             <div class="carousel">
               <div class="list">
                 <div class="item">
-                  <img src={AboutSlide1}/>
+                  <img src={AboutSlide1} />
                   <div class="content">
                     <div class="author">DOCHUB</div>
                     <div class="title">Where Technology Meets Care</div>
@@ -1181,7 +1189,7 @@ const Homepage = () => {
                   </div>
                 </div>
                 <div class="item">
-                  <img src={AboutSlide2}/>
+                  <img src={AboutSlide2} />
                   <div class="content">
                     <div class="author">DOCHUB</div>
                     <div class="title">Where Technology Meets Care</div>
@@ -1200,7 +1208,7 @@ const Homepage = () => {
                   </div>
                 </div>
                 <div class="item">
-                  <img src={AboutSlide3}/>
+                  <img src={AboutSlide3} />
                   <div class="content">
                     <div class="author">DOCHUB</div>
                     <div class="title">Where Technology Meets Care</div>
@@ -1300,7 +1308,7 @@ const Homepage = () => {
 
               <div class="profile">
                 <img src={Avater} width="100" height="100" loading="lazy" alt="Sam Jhonson"
-                  class="img"/>
+                  class="img" />
 
                 <p class="label-2 profile-name">Riya Sharma</p>
               </div>
@@ -1402,7 +1410,7 @@ const Homepage = () => {
                 <div class="footer-brand has-before has-after">
 
                   <a href="#" class="logo">
-                    <img src={Logo} width="160" height="50" loading="lazy" alt="grilli home"/>
+                    <img src={Logo} width="160" height="50" loading="lazy" alt="grilli home" />
                   </a>
 
                   <address class="body-4">
@@ -1434,7 +1442,7 @@ const Homepage = () => {
                       <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
 
                       <input type="email" name="email_address" placeholder="Your email" autocomplete="off"
-                        class="input-field"/>
+                        class="input-field" />
                     </div>
 
                     <button type="submit" class="btn btn-secondary">
@@ -1500,7 +1508,7 @@ const Homepage = () => {
             </div>
           </footer>
 
-          
+
 
 
         </article>
@@ -1512,7 +1520,7 @@ const Homepage = () => {
 
       <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-      </a> 
+      </a>
 
     </>
   );
