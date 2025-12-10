@@ -45,15 +45,15 @@ const AdminPayment = () => {
 
                         <tbody>
                             <tr>
-                                <td>dfdf</td>
-                                <td>fsdfsf</td>
-                                <td>dfdsfd</td>
+                                <td>101</td>
+                                <td>1</td>
+                                <td>3</td>
                                 <td className={style.status}>Paid</td>
                                 <td>
                                     <a href="">Download Receipt</a>
                                 </td>
-                                <td>dhchjdhschsg</td>
-                                <td>dhchjdhschsg</td>
+                                <td>07/12/2025</td>
+                                <td>15:45</td>
                                 <td className={style.buttonContainer}>
 
                                     <DeleteButton />

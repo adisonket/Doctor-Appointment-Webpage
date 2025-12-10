@@ -2,8 +2,8 @@ import React, { useEffect,useState } from "react";
 import style from "./AdminDocDocu.module.css";
 import Sidebar from "./Component/Sidebar";
 import RightSection from "./Component/RightSection";
-import DocPic from "../assets/images/Adhip.jpg";
-import CertificateImg from "../assets/images/4.jpeg";
+import DocPic from "../assets/images/Doctor-img.jpg";
+import CertificateImg from "../assets/images/Dr-Rahul-Roy-Chowdhury-Medical-Registration-certificate.jpg";
 
 const AdminDocDocu = () => {
     const [status, setStatus] = useState(null);

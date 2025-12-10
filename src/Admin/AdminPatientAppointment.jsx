@@ -47,11 +47,11 @@ const AdminPatientAppointment = () => {
 
                         <tbody>
                             <tr>
-                                <td>dfdf</td>
-                                <td>fsdfsf</td>
-                                <td>sdfsfs</td>
-                                <td>sdfsfs</td>
-                                <td>sdfsfs</td>
+                                <td>1</td>
+                                <td>6</td>
+                                <td>Mriganka Adhikary</td>
+                                <td>12/12/2025</td>
+                                <td>10:00</td>
                                 <td>
                                     <NavLink to="/adminuser/patient/appointment/prescription">See Prescription</NavLink>
                                 </td>

@@ -47,11 +47,11 @@ const AdminDocAppointment = () => {
 
                           <tbody>
                               <tr>
-                                  <td>dfdf</td>
-                                  <td>fsdfsf</td>
-                                  <td>sdfsfs</td>
-                                  <td>sdfsfs</td>
-                                  <td>sdfsfs</td>
+                                  <td>1</td>
+                                  <td>4</td>
+                                  <td>Soumi Ghosh</td>
+                                  <td>12/12/2025</td>
+                                  <td>10:00</td>
 
 
                                   <td className={style.status}>Paid</td>

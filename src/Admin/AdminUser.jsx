@@ -73,10 +73,10 @@ const AdminUser = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>gdg</td>
-                    <td>dfhd</td>
-                    <td>hd</td>
-                    <td>dhhd</td>
+                    <td>125698</td>
+                    <td>Tousif</td>
+                    <td>6290261670</td>
+                    <td>mehmodtousik@gmail.com</td>
                     <td className={style.link}>
                       <NavLink to="/adminuser/doc/document">See Documents</NavLink>
                     </td>
@@ -110,14 +110,14 @@ const AdminUser = () => {
                 <tbody>
                   <tr>
                     <td>P201</td>
-                    <td>dfgv</td>
-                    <td>hhfvh</td>
-                    <td>dfsd</td>
+                    <td>Raja Hansda</td>
+                    <td>6987521548</td>
+                    <td>hansdaraja@gmail.com</td>
                     <td>Male</td>
                     <td>
                       <NavLink to="/adminuser/patient/appointment">See Appointments</NavLink>
                     </td>
-                    <td>dh</td>
+                    <td>07/07/2025</td>
                     <td className={style.buttonContainer}>
                       <DeleteButton/>
                     </td>
