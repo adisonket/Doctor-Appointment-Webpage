@@ -1,16 +1,15 @@
 import React from "react";
 import styles from "./PatientProfile.module.css";
 import profileimg from '../assets/images/profile.jpg';
+import { NavLink } from "react-router-dom";
 
 export default function PatientProfile() {
-  // 1. Set DOB in YYYY-MM-DD format
-  const dob = "2003-06-15"; // <-- change this to patient DOB
+  const dob = "2003-06-15"; 
 
-  // 2. Function to calculate age from DOB
   const calculateAge = (dobString) => {
     const dobDate = new Date(dobString);
     const diffMs = Date.now() - dobDate.getTime();
-    const ageDate = new Date(diffMs); // milliseconds from epoch
+    const ageDate = new Date(diffMs); 
     return Math.abs(ageDate.getUTCFullYear() - 1970);
   };
 
@@ -38,7 +37,9 @@ export default function PatientProfile() {
 
         {/* Edit Button */}
         <div className={styles.buttonWrapper}>
+          <NavLink to="/patienteditprofile">
           <button className={styles.editButton}>EDIT</button>
+          </NavLink>
         </div>
 
       </div>

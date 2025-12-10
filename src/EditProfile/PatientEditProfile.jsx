@@ -3,7 +3,8 @@ import styles from "./PatientEditProfile.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; //  required CSS
+import "react-toastify/dist/ReactToastify.css"; 
+import { NavLink } from "react-router";
 
 function PatientEditProfile() {
   const [patientData, setPatientData] = useState({
@@ -215,9 +216,11 @@ function PatientEditProfile() {
             {/* error */}
             {error && <p className={styles.patient_errorMessage}>{error}</p>}
 
-            <button type="submit" className={styles.patient_button}>
-              Save Changes
-            </button>
+            <NavLink to='/patientprofile'>
+              <button type="submit" className={styles.patient_button}>
+                Save Changes
+              </button>
+            </NavLink>
           </form>
         </div>
 

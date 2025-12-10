@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import style from './DoctorEditProfile.module.css';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { NavLink } from 'react-router';
 
 
 function DoctorEditProfile() {
@@ -170,9 +171,11 @@ function DoctorEditProfile() {
             />
 
             <div>
-              <button type="submit" className={style.doctoredit_button}>
-                Save Changes
-              </button>
+              <NavLink to="/doctorprofile">
+                <button type="submit" className={style.doctoredit_button}>
+                  Save Changes
+                </button>
+              </NavLink>
             </div>
 
 

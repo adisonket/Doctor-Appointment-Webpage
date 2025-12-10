@@ -3,6 +3,7 @@ import style from '../css/Review.module.css';
 import '@lottiefiles/lottie-player';
 import PaySuccessAnimation from './PaySuccessAnimation.jsx';
 import ReciptAnimation from './ReciptAnimation.jsx';
+import { NavLink } from 'react-router';
 
 const Review = () => {
 
@@ -95,7 +96,13 @@ const Review = () => {
                             </div>
                         </div>
                     </div>
-
+                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>
+                        <NavLink to="/receipt">
+                            <button className={style.review_submit_button} type="submit">
+                                Download 
+                            </button>
+                        </NavLink>
+                    </div>
                     <div className={style.review}>
                         <form className={style.review_form}>
                             <textarea
@@ -104,7 +111,9 @@ const Review = () => {
                                 placeholder="Enter Your Review"
                                 required
                             ></textarea>
-                            <button className={style.review_submit_button} type="submit">Submit</button>
+                            <NavLink to="/">
+                                <button className={style.review_submit_button} type="submit">Submit</button>
+                            </NavLink>
                         </form>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import "@lottiefiles/lottie-player";
 import style from '../css/UserLogin.module.css';
 import { useState } from "react";
 import LoginAnimation from "./LoginAnimation.jsx";
+import { NavLink } from "react-router-dom";
 
 
 const UserLogin = () => {
@@ -90,6 +91,7 @@ const UserLogin = () => {
                                                     />
                                                 </div>
 
+                                                <NavLink to="/">
                                                 <button
                                                     type="submit"
                                                     className={`${style.registration_submit} ${style.registration_form}`}
@@ -101,6 +103,7 @@ const UserLogin = () => {
                                                 >
                                                     Create Account
                                                 </button>
+                                                </NavLink>
                                             </form>
                                         </div>
                                     </div>
@@ -150,17 +153,19 @@ const UserLogin = () => {
                                                     />
                                                 </div>
 
-                                                <button
-                                                    type="submit"
-                                                    className={`${style.registration_submit} ${style.registration_form}`}
-                                                    style={{
-                                                        display: "flex",
-                                                        justifyContent: "center",
-                                                        alignItems: "center",
-                                                    }}                                                    
-                                                >
-                                                    Login
-                                                </button>
+                                                <NavLink to="/">
+                                                    <button
+                                                        type="submit"
+                                                        className={`${style.registration_submit} ${style.registration_form}`}
+                                                        style={{
+                                                            display: "flex",
+                                                            justifyContent: "center",
+                                                            alignItems: "center",
+                                                        }}
+                                                    >
+                                                        Login
+                                                    </button>
+                                                </NavLink>
                                             </form>
                                         </div>
                                     </div>

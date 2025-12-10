@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./DoctorProfile.module.css";
+import { NavLink } from "react-router";
 
 const DoctorProfile = () => {
   return (
@@ -74,9 +75,11 @@ const DoctorProfile = () => {
             </div>
 
             <div className={styles.right_part_divs}>
-              <button className={styles.right_part_divs_button}>
-                Edit Profile
-              </button>
+              <NavLink to="/doctoreditprofile">
+                <button className={styles.right_part_divs_button}>
+                  Edit Profile
+                </button>
+              </NavLink>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "@lottiefiles/lottie-player";
 import style from '../css/DoctorLogin.module.css';
 import DocLoginAnimation from './DocLoginAnimation.jsx';
+import { NavLink } from 'react-router';
 
 const DoctorLogin = () => {
     const [isLoginActive, setIsLoginActive] = useState(false);
@@ -93,12 +94,14 @@ const DoctorLogin = () => {
                                                     required
                                                 />
                                             </div>
-                                            <button
-                                                type="submit"
-                                                className={`${style['registration_submit']} ${style['registration_form']}`}
-                                            >
-                                                Create Account
-                                            </button>
+                                            <NavLink to="/">
+                                                <button
+                                                    type="submit"
+                                                    className={`${style['registration_submit']} ${style['registration_form']}`}
+                                                >
+                                                    Create Account
+                                                </button>
+                                            </NavLink>
                                         </form>
                                     </div>
                                 </div>
@@ -136,12 +139,14 @@ const DoctorLogin = () => {
                                                     required
                                                 />
                                             </div>
-                                            <button
-                                                type="submit"
-                                                className={`${style['registration_submit']} ${style['registration_form']}`}
-                                            >
-                                                Login
-                                            </button>
+                                            <NavLink to="/">
+                                                <button
+                                                    type="submit"
+                                                    className={`${style['registration_submit']} ${style['registration_form']}`}
+                                                >
+                                                    Login
+                                                </button>
+                                            </NavLink>
                                         </form>
                                     </div>
                                 </div>

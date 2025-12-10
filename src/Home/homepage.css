@@ -678,7 +678,8 @@
   border: none;
   border-radius: 12px;
   /* padding: 12px; */
-  padding: 5px;
+  /* padding: 5px; */
+  padding: 7px 23px;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;

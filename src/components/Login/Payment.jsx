@@ -3,6 +3,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import style from '../css/Payment.module.css';
 import AddAnimation from "./AddAnimation.jsx";
 import mastercardLogo from '/src/assets/images/Mastercard_2019_logo.png';
+import { NavLink } from "react-router";
+
 
 const Payment = () => {
     const sliderRef = useRef(null);
@@ -181,9 +183,11 @@ const Payment = () => {
                                             />
                                         </div>
 
-                                        <button className={`${style.payment_button_styles} ${style.payment_checkout}`} type="submit" style={{ marginTop: 8 }}>
-                                            Checkout
-                                        </button>
+                                        <NavLink to="/review">
+                                            <button className={`${style.payment_button_styles} ${style.payment_checkout}`} type="submit" style={{ marginTop: 8 }}>
+                                                Checkout
+                                            </button>
+                                        </NavLink>
                                     </form>
                                 </div>
 
@@ -210,7 +214,7 @@ const Payment = () => {
                         </div>
                         <div className={`${style.patient_details_age} ${style.payment_right_pad}`}>
                             <span className={style.payment_font_green}>Age:</span>
-                            <span>22 <span>(F)</span></span>
+                            <span>22 (F)</span>
                         </div>
                     </div>
 

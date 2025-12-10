@@ -181,11 +181,12 @@ const BookAppointment = () => {
           </div>
         )}
 
-        {/* 💰 Fee Section */}
         {selectedTime && (
           <div className={styles.feeSection}>
             <p><strong>Consultation Fee:</strong> {doctor.fee}</p>
-            <button className={styles.bookButton}>Book</button>
+            <a href="/payment">
+              <button className={styles.bookButton}>Book</button>
+            </a>
           </div>
         )}
 

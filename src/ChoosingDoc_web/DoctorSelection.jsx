@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import styles from "./DoctorSelection.module.css";
+import { NavLink } from "react-router-dom";
 
 
-// Updated categories to be an array of objects with names and images
 const categories = [
   { name: "Cardiologist", image: "https://www.creativehatti.com/wp-content/uploads/edd/2021/08/Heart-is-with-the-stethoscope-illustration-15-large.jpg" },
   { name: "Gynecologist", image: "https://cdn.vectorstock.com/i/750p/34/11/cute-funny-smiling-woman-doctor-gynecologist-vector-31693411.avif" },
@@ -265,7 +265,9 @@ export default function DoctorSelection() {
             </div>
 
             <div className={styles.buttonRow}>
+              <NavLink to="/bookappointment">
               <button className={styles.bookBtn}>Book</button>
+              </NavLink>
               <button className={styles.messageBtn}>Message</button>
             </div>
           </div>

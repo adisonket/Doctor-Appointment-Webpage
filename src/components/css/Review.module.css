@@ -21,7 +21,8 @@
 
 .pay_conf_review {
     width: 107rem;
-    height: 67rem;
+    /* height: 67rem; */
+    height: 71rem;
 
     /* border: 1px solid black; */
     margin: auto;
@@ -124,7 +125,8 @@ textarea:focus {
 }
 
 .review {
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    margin-top: 33px;
 }
 
 .review_form {
