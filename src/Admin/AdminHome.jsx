@@ -133,11 +133,23 @@ const AdminHome = () => {
   
             <tbody>
               <tr>
-                <td>dfdf</td>
-                <td>fsdfsf</td>
+                <td>125698</td>
+                <td>Tousif</td>
                 <td>Doctor</td>
-                <td>dfdsfd</td>
-                <td>dfdsfd</td>
+                <td>6290261670</td>
+                <td>mehmodtousik@gmail.com</td>
+                <td className={style.buttonContainer}>
+                  {/* <!-- <button className="edit">Edit</button>  --> */}
+  
+                  <DeleteButton/>
+                </td>
+              </tr>
+              <tr>
+                <td>125699</td>
+                <td>Adhip</td>
+                <td>Doctor</td>
+                <td>9330591139</td>
+                <td>adhiphalder8585@gmail.com</td>
                 <td className={style.buttonContainer}>
                   {/* <!-- <button className="edit">Edit</button>  --> */}
   

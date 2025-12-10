@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import style from "./AdminDocDocu.module.css";
 import Sidebar from "./Component/Sidebar";
 import RightSection from "./Component/RightSection";
-import CertificateImg from "../assets/images/4.jpeg";
+import CertificateImg from "../assets/images/Prescription.png";
 import DownloadButton from "./Component/DownloadButton";
 
 const AdminPrescription = () => {
