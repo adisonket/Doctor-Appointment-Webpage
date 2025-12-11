@@ -887,7 +887,7 @@ export default function VerifyDoctor() {
               </div>
             )}
           </div>
-          <NavLink to="/">
+          <NavLink to="/doctorprofile">
             <button type="submit" className={styles.saveButton}>
               Submit for Verification
             </button>

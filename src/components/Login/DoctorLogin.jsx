@@ -94,7 +94,7 @@ const DoctorLogin = () => {
                                                     required
                                                 />
                                             </div>
-                                            <NavLink to="/">
+                                            <NavLink to="/verifydoctor">
                                                 <button
                                                     type="submit"
                                                     className={`${style['registration_submit']} ${style['registration_form']}`}
@@ -139,7 +139,7 @@ const DoctorLogin = () => {
                                                     required
                                                 />
                                             </div>
-                                            <NavLink to="/">
+                                            <NavLink to="/doctorprofile">
                                                 <button
                                                     type="submit"
                                                     className={`${style['registration_submit']} ${style['registration_form']}`}
